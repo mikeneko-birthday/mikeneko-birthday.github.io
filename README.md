@@ -1,5 +1,8 @@
 # mikeneko-birthday
 
+## Node Version
+v18.12
+
 ## Project setup
 ```
 npm install
