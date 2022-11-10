@@ -1,6 +1,11 @@
 <template>
+  <ul>
+    <li @click="changeLang('cn')">cn</li>
+    <li @click="changeLang('en')">en</li>
+    <li @click="changeLang('ja')">ja</li>
+  </ul>
   <nav>
-    <router-link to="/">Home</router-link> |
+    <router-link to="/">{{ $t("TabHome") }}</router-link> |
     <router-link to="/about">About</router-link>
   </nav>
   <router-view/>
@@ -8,6 +13,12 @@
 
 <script>
 export default {
+  methods: {
+    changeLang(lang) {
+      localStorage.site_lang = lang;
+      this.$i18n.locale = lang;
+    }
+  },
 };
 </script>
 
