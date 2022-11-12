@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkmikeneko_birthday"]=self["webpackChunkmikeneko_birthday"]||[]).push([[443],{7381:function(n,e,t){t.r(e),t.d(e,{default:function(){return h}});var a=t(3396);const r={class:"about"},u=(0,a._)("h1",null,"This is an about page",-1),i=[u];function s(n,e){return(0,a.wg)(),(0,a.iD)("div",r,i)}var c=t(89);const o={},k=(0,c.Z)(o,[["render",s]]);var h=k}}]);
+//# sourceMappingURL=about.f2a11159.js.map
