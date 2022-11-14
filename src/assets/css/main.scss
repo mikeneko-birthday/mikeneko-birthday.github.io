@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+html, body {
+  margin: 0;
+}
+
 html {
   font-size: 14px;
   font-family: "Zen Maru Gothic", Helvetica, Arial, sans-serif;
@@ -14,6 +18,11 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 
-html, body {
-  margin: 0;
+body {
+  &.cat-paw {
+    cursor: url("../cursor/cat_paw1.png"), auto;
+    a {
+      cursor: url("../cursor/cat_paw2.png"), pointer;
+    }
+  }
 }
