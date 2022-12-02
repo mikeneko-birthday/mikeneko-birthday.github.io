@@ -11,6 +11,7 @@
     "@animxyz/vue3": "^0.6.7",
     "core-js": "^3.8.3",
     "mitt": "^3.0.0",
+    "oh-vue-icons": "^1.0.0-rc3",
     "vue": "^3.2.13",
     "vue-i18n": "^9.2.2",
     "vue-router": "^4.0.3"
