@@ -1,5 +1,5 @@
 import { createI18n } from "vue-i18n";
-import messages from "./lang";
+import messages from "./message";
 
 const i18n = createI18n({
   // default locale
