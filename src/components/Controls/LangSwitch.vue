@@ -1,6 +1,6 @@
 <template>
   <div class="lang-switch">
-    <button class="lang-button" @click="showList">
+    <button class="lang-button" @click="toggleList">
       <v-icon name="io-language-outline" />
     </button>
     <TransitionGroup name="list-stagger" tag="ul" class="lang-list">
@@ -41,7 +41,7 @@ export default {
     },
   },
   methods: {
-    showList() {
+    toggleList() {
       this.transitionRev = !this.transitionRev;
       this.$nextTick(() => {
         this.showUp = !this.showUp;
@@ -50,6 +50,7 @@ export default {
     changeLang(lang) {
       localStorage.site_lang = lang;
       this.$i18n.locale = lang;
+      this.toggleList();
     },
   },
 };
