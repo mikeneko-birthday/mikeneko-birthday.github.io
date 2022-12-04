@@ -22,3 +22,32 @@
     }
   }
 }
+
+.list-stagger {
+  &-enter {
+    &-from {
+      transform: translateY(var(--list-stagger-distance, 0));
+      opacity: 0;
+    }
+    &-active {
+      transition: all var(--list-stagger-time, 0.3s) ease var(--list-stagger-time, 0.3s);
+    }
+    &-to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  &-leave {
+    &-from {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    &-active {
+      transition: all var(--list-stagger-time, 0.3s) ease;
+    }
+    &-to {
+      transform: translateY(var(--list-stagger-distance, 0));
+      opacity: 0;
+    }
+  }
+}
