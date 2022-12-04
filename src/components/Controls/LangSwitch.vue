@@ -3,20 +3,21 @@
     <button class="lang-button" @click="toggleList">
       <v-icon name="io-language-outline" />
     </button>
+    <div>Change to svg for fixing space problem</div>
     <TransitionGroup name="list-stagger" tag="ul" class="lang-list">
       <li
-        v-for="(lang, index) in computedList"
+        v-for="(lang, index) in langList"
+        v-show="showUp"
         :key="lang.code"
         :class="[
           'lang-choice',
           `lang-${lang.code}`
         ]"
         :style="{
-          'transition-delay': transitionRev ? `calc(${index} * var(--list-stagger-time) / 2)` : `calc(${langList.length - index} * var(--list-stagger-time) / 2)`
+          'transition-delay': showUp ? `calc(${index} * var(--list-stagger-time) / 2)` : `calc(${langList.length - index} * var(--list-stagger-time) / 2)`
         }"
       >
         <button @click="changeLang(lang.code)">{{ lang.text }}</button>
-        <!-- {{ lang.text }} -->
       </li>
     </TransitionGroup>
   </div>
@@ -26,7 +27,6 @@
 export default {
   data() {
     return {
-      transitionRev: false,
       showUp: false,
       langList: [
         { code: "en", text: "Aa" },
@@ -35,17 +35,9 @@ export default {
       ],
     };
   },
-  computed: {
-    computedList() {
-      return this.showUp ? this.langList : [];
-    },
-  },
   methods: {
     toggleList() {
-      this.transitionRev = !this.transitionRev;
-      this.$nextTick(() => {
-        this.showUp = !this.showUp;
-      });
+      this.showUp = !this.showUp;
     },
     changeLang(lang) {
       localStorage.site_lang = lang;
