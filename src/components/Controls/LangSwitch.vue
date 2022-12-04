@@ -11,7 +11,8 @@
         :key="lang.code"
         :class="[
           'lang-choice',
-          `lang-${lang.code}`
+          `lang-${lang.code}`,
+          { 'active': lang.code == currentLang }
         ]"
         :style="{
           'transition-delay': showUp ? `calc(${index} * var(--list-stagger-time) / 2)` : `calc(${langList.length - index} * var(--list-stagger-time) / 2)`
@@ -27,6 +28,7 @@
 export default {
   data() {
     return {
+      currentLang: localStorage.site_lang,
       showUp: false,
       langList: [
         { code: "en", text: "Aa" },
@@ -41,6 +43,7 @@ export default {
     },
     changeLang(lang) {
       localStorage.site_lang = lang;
+      this.currentLang = lang;
       this.$i18n.locale = lang;
       this.toggleList();
     },
