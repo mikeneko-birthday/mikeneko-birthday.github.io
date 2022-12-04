@@ -17,12 +17,3 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-body {
-  &.cat-paw {
-    cursor: url("../cursor/cat_paw1.svg"), auto;
-    a {
-      cursor: url("../cursor/cat_paw2.svg"), pointer;
-    }
-  }
-}

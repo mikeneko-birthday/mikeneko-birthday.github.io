@@ -1,13 +1,13 @@
 // Oh Vue Icon https://oh-vue-icons.js.org/
 import { OhVueIcon, addIcons } from "oh-vue-icons";
 import {
-  FaFlag,
-  RiZhihuFill
+  BiCursorFill,
+  FaPaw,
 } from "oh-vue-icons/icons";
 
 addIcons(
-  FaFlag,
-  RiZhihuFill
+  BiCursorFill,
+  FaPaw,
 );
 
 export default OhVueIcon;
