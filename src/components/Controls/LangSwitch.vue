@@ -7,11 +7,16 @@
       <li
         v-for="(lang, index) in computedList"
         :key="lang.code"
+        :class="[
+          'lang-choice',
+          `lang-${lang.code}`
+        ]"
         :style="{
           'transition-delay': transitionRev ? `calc(${index} * var(--list-stagger-time) / 2)` : `calc(${langList.length - index} * var(--list-stagger-time) / 2)`
         }"
       >
         <button @click="changeLang(lang.code)">{{ lang.text }}</button>
+        <!-- {{ lang.text }} -->
       </li>
     </TransitionGroup>
   </div>
@@ -53,6 +58,40 @@ export default {
 <style lang="scss" scoped>
 .lang-list {
   --list-stagger-time: 0.3s;
-  --list-stagger-distance: -15px;
+  --list-stagger-distance: -1rem;
+  list-style: none;
+  padding: 0;
+  .lang-choice {
+    button {
+      color: #fff;
+      font-size: 1.5rem;
+      font-weight: bold;
+      white-space: nowrap;
+      line-height: 1;
+      width: 2em;
+      height: 2em;
+      background-color: var(--color-main);
+      border-radius: 10rem;
+      border: none;
+      box-shadow: 0 .25rem 0 #f7dee4;
+      transition: all .3s ease;
+    }
+    &:is(.lang-cn, .lang-ja) {
+      button {
+        font-family: "Kosugi Maru", sans-serif !important;
+        // font-size: 1em;
+      }
+    }
+    + .lang-choice {
+      margin-top: .5rem;
+    }
+    &:hover, &.active {
+      button {
+        background: var(--color-sub);
+        border-color: var(--color-sub);
+        box-shadow: 0 .25rem 0 #dfd2df;
+      }
+    }
+  }
 }
 </style>
