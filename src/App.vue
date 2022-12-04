@@ -28,7 +28,9 @@ export default {
 <style lang="scss">
 #app {
   &.cat-paw {
-    cursor: url("@/assets/cursor/cat_paw1.svg"), auto;
+    * {
+      cursor: url("@/assets/cursor/cat_paw1.svg"), auto;
+    }
     a {
       cursor: url("@/assets/cursor/cat_paw2.svg"), pointer;
     }
