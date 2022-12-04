@@ -1,0 +1,24 @@
+.router-fade {
+  &-enter {
+    &-from {
+      opacity: 0;
+    }
+    &-active {
+      transition: opacity var(--router-fade-time, 0.3s) ease var(--router-fade-time, 0.3s);
+    }
+    &-to {
+      opacity: 1;
+    }
+  }
+  &-leave {
+    &-from {
+      opacity: 1;
+    }
+    &-active {
+      transition: opacity var(--router-fade-time, 0.3s) ease;
+    }
+    &-to {
+      opacity: 0;
+    }
+  }
+}

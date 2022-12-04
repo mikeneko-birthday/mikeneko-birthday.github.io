@@ -9,6 +9,7 @@ import OhVueIcon from "./utils/iconImport";
 
 import "./assets/css/main.scss";
 import "./assets/css/color.scss";
+import "./assets/css/transition.scss";
 
 createApp(App)
   .use(router)

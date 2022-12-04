@@ -1,8 +1,8 @@
 <template>
-  <div class="home">
+  <main class="home">
     <img alt="Vue logo" src="../assets/logo.svg" @click="switchCursor">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  </main>
 </template>
 
 <script>
@@ -21,3 +21,9 @@ export default {
   },
 };
 </script>
+
+<style lang="scss" scoped>
+.home {
+  --router-fade-time: 0.3s;
+}
+</style>
