@@ -3,7 +3,6 @@
     <button class="lang-button" @click="toggleList">
       <v-icon name="io-language-outline" />
     </button>
-    <div>Change to svg for fixing space problem</div>
     <TransitionGroup name="list-stagger" tag="ul" class="lang-list">
       <li
         v-for="(lang, index) in langList"
@@ -18,7 +17,9 @@
           'transition-delay': showUp ? `calc(${index} * var(--list-stagger-time) / 2)` : `calc(${langList.length - index} * var(--list-stagger-time) / 2)`
         }"
       >
-        <button @click="changeLang(lang.code)">{{ lang.text }}</button>
+        <button @click="changeLang(lang.code)">
+          <img :src="lang.img" :alt="lang.code">
+        </button>
       </li>
     </TransitionGroup>
   </div>
@@ -31,9 +32,9 @@ export default {
       currentLang: localStorage.site_lang,
       showUp: false,
       langList: [
-        { code: "en", text: "Aa" },
-        { code: "cn", text: "中" },
-        { code: "ja", text: "日" },
+        { code: "en", img: require("@/assets/img/lang/en.svg") },
+        { code: "cn", img: require("@/assets/img/lang/cn.svg") },
+        { code: "ja", img: require("@/assets/img/lang/ja.svg") },
       ],
     };
   },
@@ -60,17 +61,23 @@ export default {
   .lang-choice {
     button {
       color: #fff;
-      font-size: 1.5rem;
-      font-weight: bold;
-      white-space: nowrap;
-      line-height: 1;
-      width: 2em;
-      height: 2em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 3rem;
+      height: 3rem;
       background-color: var(--color-main);
+      box-shadow: 0 .25rem 0 #f7dee4;
       border-radius: 10rem;
       border: none;
-      box-shadow: 0 .25rem 0 #f7dee4;
+      padding: 0;
+      margin: 0;
       transition: all .3s ease;
+      img {
+        fill: #fff;
+        width: 60%;
+        object-fit: contain;
+      }
     }
     &:is(.lang-cn, .lang-ja) {
       button {
