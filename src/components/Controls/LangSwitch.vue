@@ -81,11 +81,18 @@ export default {
     + .lang-choice {
       margin-top: .5rem;
     }
-    &:hover, &.active {
+    &.active {
       button {
         background: var(--color-sub);
         border-color: var(--color-sub);
         box-shadow: 0 .25rem 0 #dfd2df;
+      }
+    }
+    &:hover {
+      button {
+        background: var(--color-theme6);
+        border-color: var(--color-theme6);
+        box-shadow: 0 .25rem 0 #d5c3d5;
       }
     }
   }
