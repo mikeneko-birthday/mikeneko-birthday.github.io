@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkmikeneko_birthday"]=self["webpackChunkmikeneko_birthday"]||[]).push([[443],{1266:function(e,n,a){a.r(n),a.d(n,{default:function(){return o}});var c=a(3396);const s=e=>((0,c.dD)("data-v-2cf2c7c8"),e=e(),(0,c.Cn)(),e),t={class:"messages"},r=s((()=>(0,c._)("h1",null,"Messages",-1))),u=[r];function i(e,n,a,s,r,i){return(0,c.wg)(),(0,c.iD)("main",t,u)}var d={},f=a(89);const k=(0,f.Z)(d,[["render",i],["__scopeId","data-v-2cf2c7c8"]]);var o=k}}]);
+//# sourceMappingURL=about.43cf0528.js.map
