@@ -56,12 +56,6 @@ export default {
 <style lang="scss" scoped>
 .lang-switch {
   position: relative;
-  button {
-    background: transparent;
-    border: none;
-    padding: 0;
-    margin: 0;
-  }
   .lang-button {
     color: var(--color-main);
     .ov-icon {

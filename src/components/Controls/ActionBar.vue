@@ -19,5 +19,11 @@ export default {
   display: flex;
   flex-flow: row nowrap;
   gap: 1rem;
+  button {
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+  }
 }
 </style>

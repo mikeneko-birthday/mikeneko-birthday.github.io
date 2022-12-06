@@ -1,7 +1,9 @@
 <template>
-  <div class="cursor-switch" @click="changeCursor">
-    <v-icon v-if="cursorType == 'catpaw'" name="fa-paw" />
-    <v-icon v-else name="bi-cursor-fill" flip="horizontal"/>
+  <div class="cursor-switch">
+    <button class="cursor-button" @click="changeCursor">
+      <v-icon v-if="cursorType == 'catpaw'" name="fa-paw" />
+      <v-icon v-else name="bi-cursor-fill" flip="horizontal"/>
+    </button>
   </div>
 </template>
 
@@ -28,6 +30,14 @@ export default {
 };
 </script>
 
-<style lang="scss">
-
+<style lang="scss" scoped>
+.cursor-switch {
+  .cursor-button {
+    color: var(--color-main);
+    .ov-icon {
+      width: 1.75rem;
+      height: 1.75rem;
+    }
+  }
+}
 </style>
