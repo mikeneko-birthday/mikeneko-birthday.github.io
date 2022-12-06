@@ -29,10 +29,10 @@ export default {
 #app {
   &.cat-paw {
     * {
-      cursor: url("@/assets/cursor/cat_paw1.svg"), auto;
+      cursor: url("@/assets/img/cursor/cat_paw1.svg"), auto;
     }
     a {
-      cursor: url("@/assets/cursor/cat_paw2.svg"), pointer;
+      cursor: url("@/assets/img/cursor/cat_paw2.svg"), pointer;
     }
   }
 }
