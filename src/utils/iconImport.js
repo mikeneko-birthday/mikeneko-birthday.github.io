@@ -3,13 +3,13 @@ import { OhVueIcon, addIcons } from "oh-vue-icons";
 import {
   BiCursorFill,
   FaPaw,
-  IoLanguageOutline
+  IoLanguage
 } from "oh-vue-icons/icons";
 
 addIcons(
   BiCursorFill,
   FaPaw,
-  IoLanguageOutline
+  IoLanguage
 );
 
 export default OhVueIcon;

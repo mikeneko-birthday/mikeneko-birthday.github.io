@@ -1,7 +1,8 @@
 <template>
   <div class="lang-switch">
+    <!-- Change to component la -->
     <button class="lang-button" @click="toggleList">
-      <v-icon name="io-language-outline" />
+      <v-icon name="io-language" />
     </button>
     <TransitionGroup name="list-stagger" tag="ul" class="lang-list">
       <li
@@ -53,11 +54,32 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.lang-switch {
+  position: relative;
+  button {
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+  }
+  .lang-button {
+    color: var(--color-main);
+    .ov-icon {
+      width: 1.75rem;
+      height: 1.75rem;
+    }
+  }
+}
 .lang-list {
   --list-stagger-time: 0.3s;
   --list-stagger-distance: -1rem;
   list-style: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
   padding: 0;
+  margin-top: .75rem;
+  transform: translateX(-50%);
   .lang-choice {
     button {
       color: #fff;
@@ -69,14 +91,10 @@ export default {
       background-color: var(--color-main);
       box-shadow: 0 .25rem 0 #f7dee4;
       border-radius: 10rem;
-      border: none;
-      padding: 0;
-      margin: 0;
       transition: all .3s ease;
       img {
         fill: #fff;
         width: 60%;
-        object-fit: contain;
       }
     }
     &:is(.lang-cn, .lang-ja) {

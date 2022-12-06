@@ -24,3 +24,20 @@ button {
   font-family: inherit;
   // font-size: 1em;
 }
+
+ul {
+  margin: 0;
+}
+
+img, svg, .ov-icon {
+  object-fit: contain;
+}
+
+.wrapper {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.ov-icon, .ov-icon :is(path, rect) {
+  color: inherit
+}

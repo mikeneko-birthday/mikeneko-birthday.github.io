@@ -15,5 +15,9 @@ export default {
 </script>
 
 <style lang="scss">
-
+.action-bar {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 1rem;
+}
 </style>

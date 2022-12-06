@@ -1,7 +1,9 @@
 <template>
   <header class="site-header">
-    <!-- <img alt="logo" src="@/assets/logo.svg" @click="switchCursor"> -->
-    <ActionBar />
+    <div class="wrapper">
+      <img alt="logo" class="site-logo" src="@/assets/logo.svg" @click="switchCursor">
+      <ActionBar />
+    </div>
   </header>
 </template>
 
@@ -14,5 +16,20 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+.site-header {
+  border-top: .5rem solid var(--color-main);
+  background: #fff;
+  box-shadow: 0 .25rem 0.25rem #f7dee4;
+  .wrapper {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+  }
+  .site-logo {
+    width: 12.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    margin-right: auto;
+  }
+}
 </style>
