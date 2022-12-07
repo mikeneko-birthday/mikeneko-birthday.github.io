@@ -1,19 +1,14 @@
 <template>
   <SiteHeader />
-  <SiteNav />
-  <router-view v-slot="{ Component }">
-    <transition name="router-fade">
-      <component :is="Component" />
-    </transition>
-  </router-view>
+  <SiteBody />
 </template>
 
 <script>
+import SiteBody from "./components/SiteComponents/SiteBody.vue";
 import SiteHeader from "./components/SiteComponents/SiteHeader.vue";
-import SiteNav from "./components/SiteComponents/SiteNav.vue";
 
 export default {
-  components: { SiteNav, SiteHeader },
+  components: { SiteHeader, SiteBody },
   mounted() {
     if (!localStorage.cursor) {
       localStorage.cursor = "catpaw";

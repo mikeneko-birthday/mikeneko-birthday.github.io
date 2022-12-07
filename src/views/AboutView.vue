@@ -1,7 +1,7 @@
 <template>
-  <main class="view view-about">
+  <section class="view view-about">
     <h1>About</h1>
-  </main>
+  </section>
 </template>
 
 <script>

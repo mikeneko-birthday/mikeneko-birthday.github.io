@@ -39,8 +39,11 @@ img, svg, .ov-icon {
 }
 
 .wrapper {
+  max-width: 100rem;
   padding-left: 2rem;
   padding-right: 2rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .ov-icon, .ov-icon :is(path, rect) {

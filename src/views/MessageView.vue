@@ -1,7 +1,7 @@
 <template>
-  <main class="view view-messages">
+  <section class="view view-messages">
     <h1>Messages</h1>
-  </main>
+  </section>
 </template>
 
 <script>

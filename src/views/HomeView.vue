@@ -1,8 +1,8 @@
 <template>
-  <main class="view view-home">
+  <section class="view view-home">
     <img alt="Vue logo" src="../assets/logo.svg" @click="switchCursor">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </main>
+  </section>
 </template>
 
 <script>
