@@ -1,7 +1,7 @@
 <template>
   <div class="lang-switch">
     <!-- Change to component la -->
-    <button class="lang-button" @click="toggleList" @blur="toggleList">
+    <button class="lang-button" @click="showList" @blur="closeList">
       <v-icon name="io-language" />
     </button>
     <TransitionGroup name="list-stagger" tag="ul" class="lang-list">
@@ -40,14 +40,17 @@ export default {
     };
   },
   methods: {
-    toggleList() {
-      this.showUp = !this.showUp;
+    showList() {
+      this.showUp = true;
+    },
+    closeList() {
+      this.showUp = false;
     },
     changeLang(lang) {
       localStorage.site_lang = lang;
       this.currentLang = lang;
       this.$i18n.locale = lang;
-      this.toggleList();
+      this.closeList();
     },
   },
 };
@@ -89,6 +92,7 @@ export default {
       img {
         fill: #fff;
         width: 60%;
+        pointer-events: none;
       }
     }
     &:is(.lang-cn, .lang-ja) {
