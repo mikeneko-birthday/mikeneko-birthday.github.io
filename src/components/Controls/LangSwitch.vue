@@ -1,7 +1,7 @@
 <template>
   <div class="lang-switch">
     <!-- Change to component la -->
-    <button class="lang-button" @click="showList" @blur="closeList">
+    <button class="lang-button" @click="toggleList" @blur="closeList">
       <v-icon name="io-language" />
     </button>
     <TransitionGroup name="list-stagger" tag="ul" class="lang-list">
@@ -40,6 +40,9 @@ export default {
     };
   },
   methods: {
+    toggleList() {
+      this.showUp = !this.showUp;
+    },
     showList() {
       this.showUp = true;
     },
