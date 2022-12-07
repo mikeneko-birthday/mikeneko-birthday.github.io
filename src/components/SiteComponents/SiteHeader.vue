@@ -19,7 +19,7 @@ export default {
 .site-header {
   border-top: .5rem solid var(--color-main);
   background: #fff;
-  box-shadow: 0 .25rem 0.25rem #f7dee4;
+  // box-shadow: 0 .25rem 0.25rem #f7dee4;
   .wrapper {
     display: flex;
     flex-flow: row nowrap;
