@@ -5,6 +5,7 @@
       <li
         v-for="link in links"
         :key="link.class"
+        :ref="link.name"
         :class="link.class"
       >
         <router-link :to="link.path" @click="moveIndicator($event.target.offsetTop)">
@@ -24,7 +25,7 @@
 export default {
   data() {
     return {
-      indicatorTop: "var(--gap-width)",
+      indicatorTop: "",
     };
   },
   computed: {
@@ -32,18 +33,21 @@ export default {
       return [
         {
           class: "link-home",
+          name: "home",
           path: "/",
           icon: require("@/assets/img/nav/home.svg"),
           text: this.$t("TabHome"),
         },
         {
           class: "link-about",
+          name: "about",
           path: "/about",
           icon: require("@/assets/img/nav/about.svg"),
           text: this.$t("TabAbout"),
         },
         {
           class: "link-message",
+          name: "message",
           path: "/message",
           icon: require("@/assets/img/nav/letter.svg"),
           iconActive: require("@/assets/img/nav/letter_active.svg"),
@@ -51,6 +55,12 @@ export default {
         },
       ];
     },
+  },
+  watch: {
+    $route(newValue) {
+      console.log(newValue);
+      this.moveIndicator(this.$refs[newValue.name] ? this.$refs[newValue.name][0]?.offsetTop : "var(--gap-width)");
+    }
   },
   methods: {
     moveIndicator(pos) {
