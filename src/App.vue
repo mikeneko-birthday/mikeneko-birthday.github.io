@@ -47,4 +47,8 @@ nav {
     }
   }
 }
+
+.view {
+  --router-fade-time: 0.3s;
+}
 </style>

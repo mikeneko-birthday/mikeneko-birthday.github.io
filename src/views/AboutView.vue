@@ -1,6 +1,6 @@
 <template>
-  <main class="view view-messages">
-    <h1>Messages</h1>
+  <main class="view view-about">
+    <h1>About</h1>
   </main>
 </template>
 

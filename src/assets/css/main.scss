@@ -11,6 +11,10 @@ html, body {
   margin: 0;
 }
 
+body {
+  background: #e0b4bf;
+}
+
 html {
   font-size: 16px;
   font-family: "Zen Maru Gothic", Helvetica, Arial, sans-serif;
@@ -21,6 +25,7 @@ html {
 }
 
 button {
+  cursor: pointer;
   font-family: inherit;
   // font-size: 1em;
 }
