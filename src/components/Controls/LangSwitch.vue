@@ -1,7 +1,7 @@
 <template>
   <div class="lang-switch">
     <!-- Change to component la -->
-    <button class="lang-button" @click="toggleList">
+    <button class="lang-button" @click="toggleList" @blur="toggleList">
       <v-icon name="io-language" />
     </button>
     <TransitionGroup name="list-stagger" tag="ul" class="lang-list">
