@@ -8,10 +8,12 @@
         :class="link.class"
       >
         <router-link :to="link.path" @click="moveIndicator($event.target.offsetTop)">
-          <span class="link-icon">
+          <div class="link-icon">
             <img :src="link.icon" :alt="link.text">
-          </span>
-          <span class="link-text">{{ link.text }}</span>
+          </div>
+          <div class="link-text">
+            <span>{{ link.text }}</span>
+          </div>
         </router-link>
       </li>
     </ul>
@@ -64,19 +66,21 @@ export default {
 <style lang="scss" scoped>
 .site-nav {
   --item-size: 4rem;
-  --gap-width: 1rem;
+  --gap-width: .625rem;
+  --LR-width: .625rem;
+  display: inline-block;
   position: relative;
-  width: 20rem;
-  background: #fff;
-  border-radius: calc(var(--item-size) / 2);
-  padding: var(--gap-width);
-  box-shadow: 0 .25rem 0.25rem #f7dee4;
-  margin: 0;
   isolation: isolate;
+  background: #fff;
+  border-radius: calc(var(--gap-width) + var(--item-size) / 2);
+  padding: var(--gap-width) var(--LR-width);
+  // box-shadow: 0 .25rem 0.25rem #f7dee4;
+  margin: 0;
+  transition: padding .5s ease;
   .nav-indicator {
     position: absolute;
     top: var(--pos-top);
-    left: var(--gap-width);
+    left: var(--LR-width);
     width: var(--item-size);
     height: var(--item-size);
     border-radius: var(--item-size);
@@ -97,26 +101,49 @@ export default {
     a {
       display: flex;
       flex-flow: row nowrap;
-      align-items: center;
+      align-items: stretch;
       border-radius: calc(var(--item-size) / 2);
-      span {
-        pointer-events: none;
+      > div {
+        // pointer-events: none;
+        display: flex;
+        align-items: center;
       }
     }
     .link-icon {
-      display: flex;
+      flex-shrink: 0;
       justify-content: center;
-      align-items: center;
       width: var(--item-size);
       height: var(--item-size);
       border-radius: var(--item-size);
       img {
         display: block;
         width: 65%;
+        pointer-events: none;
       }
     }
     .link-text {
-      padding-left: 1rem;
+      white-space: nowrap;
+      overflow: hidden;
+      justify-content: start;
+      max-width: 0;
+      opacity: 0;
+      visibility: hidden;
+      transition: all .5s ease;
+      span {
+        padding-left: 0.75rem;
+        padding-right: 1.25rem;
+        pointer-events: none;
+      }
+    }
+  }
+
+  &:hover {
+    ul {
+      .link-text {
+        max-width: 13rem;
+        opacity: 1;
+        visibility: visible;
+      }
     }
   }
 }
