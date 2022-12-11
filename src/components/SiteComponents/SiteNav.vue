@@ -1,6 +1,6 @@
 <template>
   <nav class="site-nav">
-    <div class="nav-indicator" :style="{ '--pos-top': indicatorTop }" />
+    <div class="nav-indicator" :style="{ '--nav-pos-top': indicatorTop }" />
     <ul>
       <li
         v-for="link in links"
@@ -59,7 +59,7 @@ export default {
   watch: {
     $route(newValue) {
       console.log(newValue);
-      this.moveIndicator(this.$refs[newValue.name] ? this.$refs[newValue.name][0]?.offsetTop : "var(--gap-width)");
+      this.moveIndicator(this.$refs[newValue.name] ? this.$refs[newValue.name][0]?.offsetTop : "var(--nav-gap-width, .625rem)");
     }
   },
   methods: {
@@ -75,25 +75,24 @@ export default {
 
 <style lang="scss" scoped>
 .site-nav {
-  --item-size: 4rem;
-  --gap-width: .625rem;
-  --LR-width: .625rem;
   display: inline-block;
   position: relative;
   isolation: isolate;
   background: #fff;
-  border-radius: calc(var(--gap-width) + var(--item-size) / 2);
-  padding: var(--gap-width) var(--LR-width);
+  box-shadow: var(--box-shadow);
+  border-radius: calc(var(--nav-gap-width, .625rem) + var(--nav-item-size, 4rem) / 2);
+  padding: var(--nav-gap-width, .625rem) var(--nav-LR-width, .625rem);
   // box-shadow: 0 .25rem 0.25rem #f7dee4;
   margin: 0;
   transition: padding .5s ease;
+  z-index: 1;
   .nav-indicator {
     position: absolute;
-    top: var(--pos-top);
-    left: var(--LR-width);
-    width: var(--item-size);
-    height: var(--item-size);
-    border-radius: var(--item-size);
+    top: var(--nav-pos-top);
+    left: var(--nav-LR-width, .625rem);
+    width: var(--nav-item-size, 4rem);
+    height: var(--nav-item-size, 4rem);
+    border-radius: var(--nav-item-size, 4rem);
     background: var(--color-main-light);
     transition: top 0.3s ease;
     z-index: -1;
@@ -102,17 +101,19 @@ export default {
     list-style: none;
     display: flex;
     flex-flow: column nowrap;
-    gap: var(--gap-width);
+    gap: var(--nav-gap-width, .625rem);
     padding: 0;
     margin: 0;
   }
   li{
     display: block;
     a {
+      font-weight: bold;
+      text-decoration: none;
       display: flex;
       flex-flow: row nowrap;
       align-items: stretch;
-      border-radius: calc(var(--item-size) / 2);
+      border-radius: calc(var(--nav-item-size, 4rem) / 2);
       > div {
         // pointer-events: none;
         display: flex;
@@ -122,9 +123,9 @@ export default {
     .link-icon {
       flex-shrink: 0;
       justify-content: center;
-      width: var(--item-size);
-      height: var(--item-size);
-      border-radius: var(--item-size);
+      width: var(--nav-item-size, 4rem);
+      height: var(--nav-item-size, 4rem);
+      border-radius: var(--nav-item-size, 4rem);
       img {
         display: block;
         width: 65%;

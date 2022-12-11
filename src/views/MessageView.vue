@@ -1,12 +1,16 @@
 <template>
-  <section class="view view-messages">
-    <h1>Messages</h1>
-  </section>
+  <SiteContent>
+    <section class="view view-messages">
+      <h1>Messages</h1>
+    </section>
+  </SiteContent>
 </template>
 
 <script>
-export default {
+import SiteContent from "@/components/SiteComponents/SiteContent.vue";
 
+export default {
+  components: { SiteContent }
 };
 </script>
 
