@@ -34,7 +34,7 @@ export default {
       showUp: false,
       langList: [
         { code: "en", img: require("@/assets/img/lang/en.svg") },
-        { code: "cn", img: require("@/assets/img/lang/cn.svg") },
+        { code: "zh", img: require("@/assets/img/lang/zh.svg") },
         { code: "ja", img: require("@/assets/img/lang/ja.svg") },
       ],
     };
@@ -53,6 +53,9 @@ export default {
       localStorage.site_lang = lang;
       this.currentLang = lang;
       this.$i18n.locale = lang;
+
+      document.documentElement.setAttribute("lang", lang);
+
       this.closeList();
     },
   },
@@ -96,12 +99,6 @@ export default {
         fill: #fff;
         width: 60%;
         pointer-events: none;
-      }
-    }
-    &:is(.lang-cn, .lang-ja) {
-      button {
-        font-family: "Kosugi Maru", sans-serif !important;
-        // font-size: 1em;
       }
     }
     + .lang-choice {

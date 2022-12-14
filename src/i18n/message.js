@@ -4,7 +4,7 @@ const messages = {
     TabAbout: "Profile",
     TabMessage: "Messages",
   },
-  "cn": {
+  "zh": {
     TabHome: "主頁",
     TabAbout: "個人檔案",
     TabMessage: "祝賀訊息",
