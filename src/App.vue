@@ -22,8 +22,7 @@ export default {
 
 <style lang="scss">
 #app {
-  display: flex;
-  flex-flow: column nowrap;
+  --header-height: 8.125rem;
   height: 100vh;
   &.cat-paw {
     * {

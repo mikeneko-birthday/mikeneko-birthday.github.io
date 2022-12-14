@@ -20,10 +20,10 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .site-content {
   height: 100%;
-  &.fade-white-bg {
+  &.fade-white-bg .view {
     background: rgba(255, 255, 255, .8);
     border-radius: calc(var(--nav-gap-width, 0.625rem) + var(--nav-item-size, 4rem) / 2);
     padding: 1.5rem 2rem;

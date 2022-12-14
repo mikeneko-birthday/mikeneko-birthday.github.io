@@ -83,7 +83,7 @@ export default {
   border-radius: calc(var(--nav-gap-width, .625rem) + var(--nav-item-size, 4rem) / 2);
   padding: var(--nav-gap-width, .625rem) var(--nav-LR-width, .625rem);
   // box-shadow: 0 .25rem 0.25rem #f7dee4;
-  margin: 0;
+  margin: 2rem 0 0;
   transition: padding .5s ease;
   z-index: 1;
   .nav-indicator {

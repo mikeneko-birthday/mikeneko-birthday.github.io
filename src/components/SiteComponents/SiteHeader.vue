@@ -15,8 +15,12 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .site-header {
+  display: block;
+  position: fixed;
+  inset: 0 0 auto;
+  height: var(--header-height);
   border-top: .5rem solid var(--color-main);
   background: #fff;
   z-index: 1;
@@ -27,8 +31,6 @@ export default {
   }
   .site-logo {
     width: 12.5rem;
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
     margin-right: auto;
   }
 }
