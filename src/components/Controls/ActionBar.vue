@@ -22,8 +22,6 @@ export default {
   button {
     background: transparent;
     border: none;
-    padding: 0;
-    margin: 0;
   }
 }
 </style>

@@ -102,8 +102,6 @@ export default {
     display: flex;
     flex-flow: column nowrap;
     gap: var(--nav-gap-width, .625rem);
-    padding: 0;
-    margin: 0;
   }
   li{
     display: block;

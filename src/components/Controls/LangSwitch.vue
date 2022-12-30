@@ -80,7 +80,6 @@ export default {
   position: absolute;
   top: 100%;
   left: 50%;
-  padding: 0;
   margin-top: .75rem;
   transform: translateX(-50%);
   .lang-choice {
