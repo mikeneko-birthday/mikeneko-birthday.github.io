@@ -24,7 +24,7 @@ export default {
 #app {
   --header-height: 8.125rem;
   height: 100vh;
-  background: #e0b4bf url("@/assets/img/background.svg") repeat center center;
+  background: #e0b4bf url("@/assets/img/background.svg") repeat center;
   background-size: 350px;
   &.cat-paw {
     * {
