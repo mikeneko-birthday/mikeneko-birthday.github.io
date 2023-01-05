@@ -37,6 +37,7 @@ button {
 }
 
 img, svg, .ov-icon {
+  max-width: 100%;
   object-fit: contain;
 }
 
