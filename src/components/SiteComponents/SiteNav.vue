@@ -1,6 +1,7 @@
 <template>
   <nav class="site-nav">
-    <div class="nav-indicator" :style="{ '--nav-pos-top': indicatorTop }" />
+    <div class="nav-indicator nav-indicator-desktop" :style="{ '--nav-pos-top': indicatorTop }" />
+    <div class="nav-indicator nav-indicator-mobile" :style="{ '--nav-pos-left': indicatorLeft }" />
     <ul>
       <li
         v-for="link in links"
@@ -22,10 +23,13 @@
 </template>
 
 <script>
+import { convertPxToRem } from "@/utils/function";
+
 export default {
   data() {
     return {
       indicatorTop: "",
+      indicatorLeft: "",
     };
   },
   computed: {
@@ -58,49 +62,71 @@ export default {
   },
   watch: {
     $route(newValue) {
-      console.log(newValue);
-      this.moveIndicator(this.$refs[newValue.name] ? this.$refs[newValue.name][0]?.offsetTop : "var(--nav-gap-width, .625rem)");
+      if (this.$refs[newValue.name]) {
+        this.moveIndicator(this.$refs[newValue.name][0]?.offsetTop);
+        this.moveMobileIndicator(this.$refs[newValue.name][0]?.offsetLeft);
+      } else {
+        this.indicatorTop = "var(--nav-gap-width, .625rem)";
+        this.indicatorLeft = "1.5rem";
+      }
     }
   },
   methods: {
     moveIndicator(pos) {
       this.indicatorTop = this.convertPxToRem(pos) + "rem";
     },
-    convertPxToRem(px) {
-      return px / parseFloat(getComputedStyle(document.documentElement).fontSize);
+    moveMobileIndicator(pos) {
+      this.indicatorLeft = this.convertPxToRem(pos) + "rem";
     },
+    convertPxToRem
   },
 };
 </script>
 
 <style lang="scss" scoped>
 .site-nav {
-  display: inline-block;
-  position: relative;
   isolation: isolate;
   background: #fff;
   box-shadow: var(--box-shadow);
   border-radius: calc(var(--nav-gap-width, .625rem) + var(--nav-item-size, 4rem) / 2);
   padding: var(--nav-gap-width, .625rem) var(--nav-LR-width, .625rem);
   // box-shadow: 0 .25rem 0.25rem #f7dee4;
-  margin: 2rem 0 0;
   transition: padding .5s ease;
   z-index: 1;
   .nav-indicator {
+    text-align: center;
     position: absolute;
-    top: var(--nav-pos-top);
-    left: var(--nav-LR-width, .625rem);
-    width: var(--nav-item-size, 4rem);
-    height: var(--nav-item-size, 4rem);
     border-radius: var(--nav-item-size, 4rem);
-    background: var(--color-main-light);
-    transition: top 0.3s ease;
+    transition: all 0.3s ease;
     z-index: -1;
+    &-desktop {
+      top: var(--nav-pos-top);
+      left: var(--nav-LR-width, .625rem);
+      width: var(--nav-item-size, 4rem);
+      height: var(--nav-item-size, 4rem);
+      background: var(--color-main-light);
+    }
+    &-mobile {
+      display: none;
+      bottom: 0.5rem;
+      left: var(--nav-pos-left);
+      width: calc(var(--nav-item-size, 4rem) + 2rem);
+      height: 0.5rem;
+      &::before {
+        content: "";
+        display: block;
+        width: 0.5rem;
+        height: 0.5rem;
+        border-radius: var(--nav-item-size, 4rem);
+        background: var(--color-main-light);
+      }
+    }
   }
   ul {
     list-style: none;
-    display: flex;
-    flex-flow: column nowrap;
+    display: grid;
+    grid-template-columns: auto;
+    align-items: center;
     gap: var(--nav-gap-width, .625rem);
   }
   li{
@@ -152,6 +178,51 @@ export default {
         max-width: 13rem;
         opacity: 1;
         visibility: visible;
+      }
+    }
+  }
+
+  @media screen and (max-width: 48em) { // 48 * 16 = 768
+    --nav-item-size: 2.75rem;
+    height: var(--nav-mobile-height);
+    border-radius: 10rem;
+    padding: 0 1.5rem;
+    .nav-indicator {
+      &-desktop {
+        display: none;
+      }
+      &-mobile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+    ul {
+      height: 100%;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+    }
+    li {
+      a {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+        .link-icon {
+          filter: grayscale(1);
+          transition: all .3s ease;
+          img {
+            width: auto;
+          }
+        }
+        .link-text {
+          display: none;
+        }
+        &.router-link-active {
+          .link-icon {
+            filter: grayscale(0);
+            transform: translateY(-.5rem);
+          }
+        }
       }
     }
   }

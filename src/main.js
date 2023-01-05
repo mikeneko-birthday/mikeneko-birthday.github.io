@@ -16,7 +16,11 @@ const emitter = mitt();
 const app = createApp(App);
 
 app.config.globalProperties.$emitter = emitter;
-app.use(router)
+
+// app.directive("window-resize",)
+
+app
+  .use(router)
   .use(i18n)
   .component("v-icon", OhVueIcon)
   .mount("#app");

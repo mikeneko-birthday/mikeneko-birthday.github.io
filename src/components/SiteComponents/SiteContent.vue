@@ -26,6 +26,7 @@ export default {
   overflow-y: scroll;
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  transition: all .3s ease;
   &::-webkit-scrollbar { /* WebKit */
       width: 0;
       height: 0;
