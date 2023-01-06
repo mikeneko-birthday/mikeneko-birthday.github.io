@@ -23,8 +23,6 @@ export default {
 <style lang="scss">
 #app {
   --header-height: 8.125rem;
-  display: flex;
-  flex-flow: column nowrap;
   height: 100vh;
   height: 100dvh;
   background: #e0b4bf url("@/assets/img/background.svg") repeat center;
@@ -36,6 +34,9 @@ export default {
     a {
       cursor: url("@/assets/img/cursor/cat_paw2.svg"), pointer;
     }
+  }
+  @media screen and (max-width: 48em) { // 48 * 16 = 768
+    height: auto;
   }
 }
 

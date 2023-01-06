@@ -27,8 +27,7 @@ export default {
   --nav-gap-width: .625rem;
   --nav-LR-width: .625rem;
   --nav-mobile-height: 5.25rem;
-  flex-grow: 1;
-  height: 0;
+  height: 100%;
   overflow: hidden;
   padding-top: var(--header-height);
   .wrapper {
@@ -57,7 +56,7 @@ export default {
       transform: translateX(-50%);
     }
     .site-content {
-      overflow-y: auto;
+      overflow-y: visible;
       padding-left: 2rem;
       padding-bottom: calc(var(--nav-mobile-height) + 2rem);
     }
