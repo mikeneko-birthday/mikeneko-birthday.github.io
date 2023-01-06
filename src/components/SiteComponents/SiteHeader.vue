@@ -33,5 +33,8 @@ export default {
     width: 12.5rem;
     margin-right: auto;
   }
+  @media screen and (max-width: 48em) { // 48 * 16 = 768
+    position: static;
+  }
 }
 </style>

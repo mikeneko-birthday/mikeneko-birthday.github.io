@@ -23,6 +23,8 @@ export default {
 <style lang="scss">
 #app {
   --header-height: 8.125rem;
+  display: flex;
+  flex-flow: column nowrap;
   height: 100vh;
   height: 100dvh;
   background: #e0b4bf url("@/assets/img/background.svg") repeat center;
