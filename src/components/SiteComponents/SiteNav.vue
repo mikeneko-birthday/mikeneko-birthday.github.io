@@ -69,11 +69,7 @@ export default {
   },
   watch: {
     $route(newValue) {
-      if (this.$refs[newValue.name]) {
-        this.indicatorPos = this.$refs[newValue.name][0].attributes["data-pos"].value;
-      } else {
-        this.indicatorPos = "1";
-      }
+      this.indicatorPos = this.$refs[newValue.name] ? this.$refs[newValue.name][0]?.attributes["data-pos"]?.value : "1";
     }
   },
   methods: {
