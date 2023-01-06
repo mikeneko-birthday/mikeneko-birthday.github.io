@@ -179,6 +179,7 @@ export default {
 
   @media screen and (max-width: 48em) { // 48 * 16 = 768
     --nav-item-size: 2.75rem;
+    --nav-mobile-btn-padding: 1rem;
     height: var(--nav-mobile-height);
     border-radius: 10rem;
     padding-top: 0;
@@ -221,6 +222,11 @@ export default {
         }
       }
     }
+  }
+
+  @media screen and (max-width: 30em) { // 30 * 16 = 480
+    --nav-item-size: 2.5rem;
+    --nav-mobile-btn-padding: .75rem;
   }
 }
 </style>

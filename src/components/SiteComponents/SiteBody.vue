@@ -62,5 +62,8 @@ export default {
       padding-bottom: calc(var(--nav-mobile-height) + 2rem);
     }
   }
+  @media screen and (max-width: 30em) { // 30 * 16 = 480
+    --nav-item-size: 2.25rem;
+  }
 }
 </style>
