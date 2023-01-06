@@ -28,8 +28,8 @@ export default {
   -ms-overflow-style: none;  /* Internet Explorer 10+ */
   transition: all .3s ease;
   &::-webkit-scrollbar { /* WebKit */
-      width: 0;
-      height: 0;
+    width: 0;
+    height: 0;
   }
   &.fade-white-bg .view {
     background: rgba(255, 255, 255, .8);
