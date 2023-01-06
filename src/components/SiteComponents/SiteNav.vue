@@ -1,6 +1,9 @@
 <template>
   <nav class="site-nav" :style="{ '--nav-pos': indicatorPos }">
     <div class="nav-indicator" />
+    <Transition name="fade">
+      <div v-show="showHint" class="nav-hint">{{ hintText }}</div>
+    </Transition>
     <ul>
       <li
         v-for="(link, index) in links"
@@ -9,7 +12,7 @@
         :class="link.class"
         :data-pos="index+1"
       >
-        <router-link :to="link.path" @click="moveIndicator($event.target.offsetTop)">
+        <router-link :to="link.path" @click="hintRoute(link.text)">
           <div class="link-icon">
             <img :src="link.icon" :alt="link.text">
           </div>
@@ -29,6 +32,9 @@ export default {
   data() {
     return {
       indicatorPos: "1",
+      showHint: false,
+      hintText: "",
+      hintTimeout: "",
     };
   },
   computed: {
@@ -72,7 +78,15 @@ export default {
     }
   },
   methods: {
-    convertPxToRem
+    convertPxToRem,
+    hintRoute(text) {
+      this.hintText = text;
+      clearTimeout(this.hintTimeout);
+      this.showHint = true;
+      this.hintTimeout = setTimeout(() => {
+        this.showHint = false;
+      }, 1500);
+    }
   },
 };
 </script>
@@ -98,6 +112,18 @@ export default {
     border-radius: var(--nav-item-size, 4rem);
     transition: top 0.3s ease;
     z-index: -1;
+  }
+  .nav-hint {
+    --fade-time: .3s;
+    color: #fff;
+    position: absolute;
+    bottom: calc(100% + .5rem);
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(171, 140, 171, .75);
+    border-radius: .25rem;
+    padding: .5rem;
+    z-index: 2;
   }
   ul {
     list-style: none;
@@ -156,6 +182,12 @@ export default {
         opacity: 1;
         visibility: visible;
       }
+    }
+  }
+
+  @media screen and (min-width: 48.0625em) { // 48.0625 * 16 = 769
+    .nav-hint {
+      display: none !important;
     }
   }
 
