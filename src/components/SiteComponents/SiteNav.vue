@@ -222,7 +222,7 @@ export default {
           filter: grayscale(1);
           transition: all .3s ease;
           img {
-            width: auto;
+            width: 100%;
           }
         }
         .link-text {
