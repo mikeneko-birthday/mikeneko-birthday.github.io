@@ -23,8 +23,12 @@ export default {
 <style lang="scss">
 #app {
   --header-height: 8.125rem;
+  display: flex;
+  flex-flow: column nowrap;
   height: 100vh;
   height: 100dvh;
+  min-height: 100vh;
+  min-height: 100dvh;
   background: #e0b4bf url("@/assets/img/background.svg") repeat center;
   background-size: 350px;
   &.cat-paw {
