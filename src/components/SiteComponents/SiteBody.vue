@@ -27,6 +27,7 @@ export default {
   --nav-gap-width: .625rem;
   --nav-LR-width: .625rem;
   --nav-mobile-height: 5.25rem;
+  --nav-mobile-btn-padding: 1rem;
   height: 100%;
   overflow: hidden;
   padding-top: var(--header-height);
@@ -48,6 +49,7 @@ export default {
     padding-left: calc(var(--nav-item-size) + var(--nav-LR-width) * 2 + 4rem);
   }
   @media screen and (max-width: 48em) { // 48 * 16 = 768
+    --nav-LR-width: 1.5rem;
     .site-nav {
       position: fixed;
       inset: auto auto 1rem 50%;

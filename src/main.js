@@ -17,8 +17,6 @@ const app = createApp(App);
 
 app.config.globalProperties.$emitter = emitter;
 
-// app.directive("window-resize",)
-
 app
   .use(router)
   .use(i18n)

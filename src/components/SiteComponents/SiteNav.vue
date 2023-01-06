@@ -1,13 +1,14 @@
 <template>
-  <nav class="site-nav">
-    <div class="nav-indicator nav-indicator-desktop" :style="{ '--nav-pos-top': indicatorTop }" />
-    <div class="nav-indicator nav-indicator-mobile" :style="{ '--nav-pos-left': indicatorLeft }" />
+  <nav class="site-nav" :style="{ '--nav-pos': indicatorPos }">
+    <div class="nav-indicator nav-indicator-desktop" />
+    <div class="nav-indicator nav-indicator-mobile" />
     <ul>
       <li
-        v-for="link in links"
+        v-for="(link, index) in links"
         :key="link.class"
         :ref="link.name"
         :class="link.class"
+        :data-pos="index+1"
       >
         <router-link :to="link.path" @click="moveIndicator($event.target.offsetTop)">
           <div class="link-icon">
@@ -28,8 +29,7 @@ import { convertPxToRem } from "@/utils/function";
 export default {
   data() {
     return {
-      indicatorTop: "",
-      indicatorLeft: "",
+      indicatorPos: "1",
     };
   },
   computed: {
@@ -70,21 +70,13 @@ export default {
   watch: {
     $route(newValue) {
       if (this.$refs[newValue.name]) {
-        this.moveIndicator(this.$refs[newValue.name][0]?.offsetTop);
-        this.moveMobileIndicator(this.$refs[newValue.name][0]?.offsetLeft);
+        this.indicatorPos = this.$refs[newValue.name][0].attributes["data-pos"].value;
       } else {
-        this.indicatorTop = "var(--nav-gap-width, .625rem)";
-        this.indicatorLeft = "1.5rem";
+        this.indicatorPos = "1";
       }
     }
   },
   methods: {
-    moveIndicator(pos) {
-      this.indicatorTop = this.convertPxToRem(pos) + "rem";
-    },
-    moveMobileIndicator(pos) {
-      this.indicatorLeft = this.convertPxToRem(pos) + "rem";
-    },
     convertPxToRem
   },
 };
@@ -107,7 +99,7 @@ export default {
     transition: all 0.3s ease;
     z-index: -1;
     &-desktop {
-      top: var(--nav-pos-top);
+      top: calc(var(--nav-gap-width, .625rem) * var(--nav-pos, 1) + var(--nav-item-size, 4rem) * (var(--nav-pos, 1) - 1));
       left: var(--nav-LR-width, .625rem);
       width: var(--nav-item-size, 4rem);
       height: var(--nav-item-size, 4rem);
@@ -116,8 +108,8 @@ export default {
     &-mobile {
       display: none;
       bottom: 0.5rem;
-      left: var(--nav-pos-left);
-      width: calc(var(--nav-item-size, 4rem) + 2rem);
+      left: calc(var(--nav-LR-width, .625rem) + (var(--nav-item-size, 2.75rem) + var(--nav-mobile-btn-padding, 1rem) * 2) * (var(--nav-pos, 1) - 1));
+      width: calc(var(--nav-item-size, 2.75rem) + var(--nav-mobile-btn-padding, 1rem) * 2);
       height: 0.5rem;
       &::before {
         content: "";
@@ -193,7 +185,8 @@ export default {
     --nav-item-size: 2.75rem;
     height: var(--nav-mobile-height);
     border-radius: 10rem;
-    padding: 0 1.5rem;
+    padding-top: 0;
+    padding-bottom: 0;
     .nav-indicator {
       &-desktop {
         display: none;
@@ -213,7 +206,7 @@ export default {
       a {
         flex-direction: column;
         align-items: center;
-        padding: 1rem;
+        padding: var(--nav-mobile-btn-padding, 1rem);
         .link-icon {
           filter: grayscale(1);
           transition: all .3s ease;
