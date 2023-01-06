@@ -1,7 +1,6 @@
 <template>
   <nav class="site-nav" :style="{ '--nav-pos': indicatorPos }">
-    <div class="nav-indicator nav-indicator-desktop" />
-    <div class="nav-indicator nav-indicator-mobile" />
+    <div class="nav-indicator" />
     <ul>
       <li
         v-for="(link, index) in links"
@@ -91,31 +90,14 @@ export default {
   .nav-indicator {
     text-align: center;
     position: absolute;
+    top: calc(var(--nav-gap-width, .625rem) * var(--nav-pos, 1) + var(--nav-item-size, 4rem) * (var(--nav-pos, 1) - 1));
+    left: var(--nav-LR-width, .625rem);
+    width: var(--nav-item-size, 4rem);
+    height: var(--nav-item-size, 4rem);
+    background: var(--color-main-light);
     border-radius: var(--nav-item-size, 4rem);
-    transition: all 0.3s ease;
+    transition: top 0.3s ease;
     z-index: -1;
-    &-desktop {
-      top: calc(var(--nav-gap-width, .625rem) * var(--nav-pos, 1) + var(--nav-item-size, 4rem) * (var(--nav-pos, 1) - 1));
-      left: var(--nav-LR-width, .625rem);
-      width: var(--nav-item-size, 4rem);
-      height: var(--nav-item-size, 4rem);
-      background: var(--color-main-light);
-    }
-    &-mobile {
-      display: none;
-      bottom: 0.5rem;
-      left: calc(var(--nav-LR-width, .625rem) + (var(--nav-item-size, 2.75rem) + var(--nav-mobile-btn-padding, 1rem) * 2) * (var(--nav-pos, 1) - 1));
-      width: calc(var(--nav-item-size, 2.75rem) + var(--nav-mobile-btn-padding, 1rem) * 2);
-      height: 0.5rem;
-      &::before {
-        content: "";
-        display: block;
-        width: 0.5rem;
-        height: 0.5rem;
-        border-radius: var(--nav-item-size, 4rem);
-        background: var(--color-main-light);
-      }
-    }
   }
   ul {
     list-style: none;
@@ -185,14 +167,14 @@ export default {
     padding-top: 0;
     padding-bottom: 0;
     .nav-indicator {
-      &-desktop {
-        display: none;
-      }
-      &-mobile {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
+      top: auto;
+      bottom: 0.5rem;
+      left: calc(var(--nav-LR-width, .625rem) + (var(--nav-item-size, 2.75rem) + var(--nav-mobile-btn-padding, 1rem) * 2) * (var(--nav-pos, 1) - 1) + (var(--nav-item-size, 2.75rem) + var(--nav-mobile-btn-padding, 1rem) * 2) / 2);
+      right: auto;
+      width: 0.5rem;
+      height: 0.5rem;
+      transform: translateX(-50%);
+      transition: left 0.3s ease;
     }
     ul {
       height: 100%;
