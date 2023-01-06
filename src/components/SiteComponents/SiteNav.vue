@@ -50,6 +50,13 @@ export default {
           text: this.$t("TabAbout"),
         },
         {
+          class: "link-illustration",
+          name: "illustration",
+          path: "/illustration",
+          icon: require("@/assets/img/nav/illustration.svg"),
+          text: this.$t("TabIllustration"),
+        },
+        {
           class: "link-message",
           name: "message",
           path: "/message",
@@ -199,7 +206,7 @@ export default {
     }
     ul {
       height: 100%;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       gap: 0;
     }
     li {
