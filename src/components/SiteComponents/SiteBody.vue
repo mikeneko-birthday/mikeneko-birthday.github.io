@@ -63,6 +63,11 @@ export default {
   }
   @media screen and (max-width: 30em) { // 30 * 16 = 480
     --nav-item-size: 2.25rem;
+    .site-content {
+      padding-top: 1rem;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
   }
 }
 </style>

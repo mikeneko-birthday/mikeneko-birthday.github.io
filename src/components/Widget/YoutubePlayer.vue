@@ -28,7 +28,7 @@ export default {
     },
     width: {
       type: String,
-      default: "70%"
+      default: "100%"
     },
     mobileWidth: {
       type: String,
@@ -70,6 +70,7 @@ export default {
   iframe {
     position: absolute;
     inset: 0;
+    border-radius: .5rem;
   }
   @media screen and (max-width: 48em) {
     width: var(--player-mobile-width);
