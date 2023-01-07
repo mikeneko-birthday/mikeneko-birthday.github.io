@@ -45,21 +45,21 @@ export default {
           name: "home",
           path: "/",
           icon: require("@/assets/img/nav/home.svg"),
-          text: this.$t("TabHome"),
+          text: this.$t("Section.Home"),
         },
         {
           class: "link-about",
           name: "about",
           path: "/about",
           icon: require("@/assets/img/nav/about.svg"),
-          text: this.$t("TabAbout"),
+          text: this.$t("Section.About"),
         },
         {
           class: "link-illustration",
           name: "illustration",
           path: "/illustration",
           icon: require("@/assets/img/nav/illustration.svg"),
-          text: this.$t("TabIllustration"),
+          text: this.$t("Section.Illustration"),
         },
         {
           class: "link-message",
@@ -67,7 +67,7 @@ export default {
           path: "/message",
           icon: require("@/assets/img/nav/letter.svg"),
           iconActive: require("@/assets/img/nav/letter_active.svg"),
-          text: this.$t("TabMessage"),
+          text: this.$t("Section.Message"),
         },
       ];
     },

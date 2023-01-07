@@ -1,21 +1,27 @@
 const messages = {
   "en": {
-    TabHome: "Home",
-    TabAbout: "Profile",
-    TabIllustration: "Illustration",
-    TabMessage: "Messages",
+    "Section":{
+      "Home": "Home",
+      "About": "Profile",
+      "Illustration": "Illustration",
+      "Message": "Messages",
+    }
   },
   "zh": {
-    TabHome: "主頁",
-    TabAbout: "個人檔案",
-    TabIllustration: "粉絲畫作",
-    TabMessage: "祝賀訊息",
+    "Section":{
+      "Home": "主頁",
+      "About": "個人檔案",
+      "Illustration": "粉絲畫作",
+      "Message": "祝賀訊息",
+    }
   },
   "ja": {
-    TabHome: "ホーム",
-    TabAbout: "プロフィール",
-    TabIllustration: "イラスト",
-    TabMessage: "メッセージ",
+    "Section":{
+      "Home": "ホーム",
+      "About": "プロフィール",
+      "Illustration": "イラスト",
+      "Message": "メッセージ",
+    }
   },
 };
 
