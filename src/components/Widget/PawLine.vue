@@ -60,7 +60,7 @@ export default {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
-  align-items: start;
+  align-items: flex-start;
   column-gap: var(--paw-gap);
   svg {
     width: var(--paw-size);
