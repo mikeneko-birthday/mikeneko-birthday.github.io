@@ -33,10 +33,10 @@ export default {
   background-size: 350px;
   &.cat-paw {
     * {
-      cursor: url("@/assets/img/cursor/cat_paw1.svg"), auto;
+      cursor: url("@/assets/img/paw/cat_paw1.svg"), auto;
     }
     a {
-      cursor: url("@/assets/img/cursor/cat_paw2.svg"), pointer;
+      cursor: url("@/assets/img/paw/cat_paw2.svg"), pointer;
     }
   }
   @media screen and (max-width: 48em) { // 48 * 16 = 768
