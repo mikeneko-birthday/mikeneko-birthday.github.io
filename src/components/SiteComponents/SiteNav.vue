@@ -66,7 +66,6 @@ export default {
           name: "message",
           path: "/message",
           icon: require("@/assets/img/nav/letter.svg"),
-          iconActive: require("@/assets/img/nav/letter_active.svg"),
           text: this.$t("Section.Message"),
         },
       ];
