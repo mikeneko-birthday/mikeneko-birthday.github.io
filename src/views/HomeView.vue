@@ -1,22 +1,19 @@
 <template>
   <SiteContent>
     <section class="view view-home">
-      <img alt="Vue logo" src="../assets/logo.svg" @click="switchCursor">
-      <HelloWorld msg="Welcome to Your Vue.js App"/>
+      <YoutubePlayer />
     </section>
   </SiteContent>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
 import SiteContent from "@/components/SiteComponents/SiteContent.vue";
+import YoutubePlayer from "@/components/Widget/YoutubePlayer.vue";
 
 export default {
-  name: "HomeView",
   components: {
-    HelloWorld,
-    SiteContent
+    SiteContent,
+    YoutubePlayer
   },
   methods: {
     switchCursor() {
