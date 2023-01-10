@@ -26,7 +26,6 @@
 </template>
 
 <script>
-import { convertPxToRem } from "@/utils/function";
 
 export default {
   data() {
@@ -77,7 +76,6 @@ export default {
     }
   },
   methods: {
-    convertPxToRem,
     hintRoute(text) {
       this.hintText = text;
       clearTimeout(this.hintTimeout);
