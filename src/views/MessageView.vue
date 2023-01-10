@@ -6,6 +6,7 @@
         :items="lettersPaginated"
         :column-width="400"
         :gap="24"
+        @redraw="toTop"
       >
         <template #default="{ item }">
           <LetterCard
@@ -18,12 +19,14 @@
         </template>
       </masonry-wall>
 
-      <PageSelect
-        :max="maxPage"
-        :current-page="currentPage"
-        has-background
-        @changePage="changePage"
-      />
+      <div class="page-switch">
+        <PageSelect
+          :max="maxPage"
+          :current-page="currentPage"
+          has-background
+          @changePage="changePage"
+        />
+      </div>
     </section>
   </SiteContent>
 </template>
@@ -46,8 +49,8 @@ export default {
   },
   data() {
     return {
-      currentPage: 1,
-      lettersData: letters
+      currentPage: parseInt(this.$route.params.page) || "1",
+      lettersData: letters,
     };
   },
   computed: {
@@ -62,13 +65,25 @@ export default {
     },
     maxPage() {
       return Math.ceil(this.lettersData.length / this.itemPerPage);
-    }
+    },
+  },
+  watch: {
+    "$route.params.page": {
+      handler(newValue) {
+        this.currentPage = parseInt(newValue);
+      }
+    },
   },
   methods: {
     convertPxToRem,
     changePage(n) {
-      console.log(n);
-      this.currentPage = n;
+      this.$router.push({
+        name: "message",
+        params: { page: n }
+      });
+    },
+    toTop() {
+      window.scrollTo(0, 0);
     }
   },
 };
@@ -88,6 +103,10 @@ export default {
     .letter {
       font-size: 0.875rem;
     }
+  }
+
+  .page-switch {
+    text-align: center;
   }
   .page-select {
     margin: 2rem 0;

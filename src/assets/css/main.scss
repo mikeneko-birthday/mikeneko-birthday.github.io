@@ -33,8 +33,11 @@ h1, h2, h3, h4, h5, h6 {
   margin-block: 0 1rem;
 }
 
-button {
+button, a {
   cursor: pointer;
+}
+
+button {
   font-family: inherit;
   background: transparent;
   border: none;

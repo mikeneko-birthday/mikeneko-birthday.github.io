@@ -12,7 +12,7 @@
       />
     </button>
     <div class="pages">
-      <button
+      <a
         v-for="n in max"
         :key="n"
         :class="[
@@ -22,7 +22,7 @@
         @click="$emit('changePage', n)"
       >
         {{ n }}
-      </button>
+      </a>
     </div>
     <button v-show="currentPage < max" class="btn-control btn-next" @click="$emit('changePage', currentPage + 1)">
       <inline-svg
@@ -46,7 +46,7 @@ export default {
     },
     currentPage: {
       type: Number,
-      default: 2
+      default: 1
     },
     hasBackground: {
       type: Boolean,
@@ -92,10 +92,12 @@ export default {
     flex-flow: row nowrap;
     column-gap: .5rem;
     .page-num {
+      text-align: center;
       font-size: 1rem;
       font-family: "FakePearl-Regular", sans-serif;
       width: 2.5rem;
       height: 2.5rem;
+      line-height: 2.5rem;
       background: transparent;
       border-radius: 5rem;
       transition: background .3s ease;

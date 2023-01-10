@@ -36,8 +36,8 @@ export default {
       default: "みけねこへ"
     },
     content: {
-      type: String,
-      default: ""
+      type: Array,
+      default: () => []
     },
     bottom: {
       type: String,
