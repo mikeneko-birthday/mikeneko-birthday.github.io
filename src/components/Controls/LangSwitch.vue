@@ -106,7 +106,6 @@ export default {
     &.active {
       button {
         background: var(--color-sub);
-        border-color: var(--color-sub);
         box-shadow: 0 .25rem 0 #dfd2df;
       }
     }

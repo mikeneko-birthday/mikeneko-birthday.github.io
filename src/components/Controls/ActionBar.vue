@@ -19,9 +19,5 @@ export default {
   display: flex;
   flex-flow: row nowrap;
   gap: 1rem;
-  button {
-    background: transparent;
-    border: none;
-  }
 }
 </style>

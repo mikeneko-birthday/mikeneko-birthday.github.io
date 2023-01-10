@@ -17,6 +17,13 @@
           />
         </template>
       </masonry-wall>
+
+      <PageSelect
+        :max="maxPage"
+        :current-page="currentPage"
+        has-background
+        @changePage="changePage"
+      />
     </section>
   </SiteContent>
 </template>
@@ -27,9 +34,10 @@ import LetterCard from "@/components/LetterCard.vue";
 
 import letters from "@/data/letter_demo";
 import { convertPxToRem } from "@/utils/function";
+import PageSelect from "@/components/Widget/PageSelect.vue";
 
 export default {
-  components: { SiteContent, LetterCard },
+  components: { SiteContent, LetterCard, PageSelect },
   props: {
     itemPerPage: {
       type: Number,
@@ -52,9 +60,16 @@ export default {
     lettersPaginated() {
       return this.lettersData.slice(this.indexStart, this.indexEnd);
     },
+    maxPage() {
+      return Math.ceil(this.lettersData.length / this.itemPerPage);
+    }
   },
   methods: {
     convertPxToRem,
+    changePage(n) {
+      console.log(n);
+      this.currentPage = n;
+    }
   },
 };
 </script>
@@ -73,6 +88,9 @@ export default {
     .letter {
       font-size: 0.875rem;
     }
+  }
+  .page-select {
+    margin: 2rem 0;
   }
 }
 </style>

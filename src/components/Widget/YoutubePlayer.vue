@@ -9,7 +9,7 @@
     <div class="youtube-player-inner" :style="{ '--player-ratio': ratioData }">
       <iframe
         type="text/html"
-        :src="`https://www.youtube.com/embed/${vid}?autoplay=${autoplay ? 1 : 0}&controls=${controls ? 1 : 0}&rel=0&origin=https://mikeneko-birthday.github.io/`"
+        :src="`https://www.youtube.com/embed/${vid}?autoplay=${autoplay ? 1 : 0}&controls=${controls ? 1 : 0}&rel=0&origin=https://mikeneko-birthday.github.io`"
         width="100%"
         height="100%"
         frameborder="0"
