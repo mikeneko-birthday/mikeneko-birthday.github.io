@@ -10,6 +10,7 @@
     "deploy": "git subtree push --prefix dist origin gh-pages"
   },
   "dependencies": {
+    "@yeger/vue-masonry-wall": "^3.4.3",
     "core-js": "^3.8.3",
     "mitt": "^3.0.0",
     "oh-vue-icons": "^1.0.0-rc3",

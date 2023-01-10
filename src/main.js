@@ -12,6 +12,9 @@ import OhVueIcon from "./utils/iconImport";
 import "viewerjs/dist/viewer.css";
 import VueViewer from "v-viewer";
 
+// Masonry
+import MasonryWall from "@yeger/vue-masonry-wall";
+
 import "./assets/css/main.scss";
 import "./assets/css/color.scss";
 import "./assets/css/transition.scss";
@@ -25,5 +28,6 @@ app
   .use(router)
   .use(i18n)
   .use(VueViewer)
+  .use(MasonryWall)
   .component("v-icon", OhVueIcon)
   .mount("#app");

@@ -14,7 +14,7 @@ export default {
   props: {
     fadeWhiteBg: {
       type: Boolean,
-      default: true
+      default: false
     },
   },
 };
