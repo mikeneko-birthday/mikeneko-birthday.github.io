@@ -1,5 +1,5 @@
 <template>
-  <SiteContent>
+  <SiteContent fade-white-bg>
     <section class="view view-home">
       <h1 class="page-title">{{ $t("General.projectName") }}</h1>
       <PawLine up-down-style />

@@ -2,14 +2,16 @@
 import { OhVueIcon, addIcons } from "oh-vue-icons";
 import {
   BiCursorFill,
+  BiZoomIn,
   FaPaw,
-  IoLanguage
+  IoLanguage,
 } from "oh-vue-icons/icons";
 
 addIcons(
   BiCursorFill,
+  BiZoomIn,
   FaPaw,
-  IoLanguage
+  IoLanguage,
 );
 
 export default OhVueIcon;
