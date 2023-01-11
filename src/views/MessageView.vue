@@ -84,12 +84,12 @@ export default {
     convertPxToRem,
     changePage(n) {
       this.showWall = false;
-      this.$router.push({
-        name: "message",
-        params: { page: n }
-      });
       clearTimeout(this.timer);
       this.timer = setTimeout(() => {
+        this.$router.push({
+          name: "message",
+          params: { page: n }
+        });
         this.showWall = true;
       }, 300);
     },
