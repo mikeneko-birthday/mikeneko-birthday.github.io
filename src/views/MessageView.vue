@@ -1,23 +1,27 @@
 <template>
   <SiteContent>
     <section class="view view-messages" v-viewer>
-      <masonry-wall
-        class="letter-wall"
-        :items="lettersPaginated"
-        :column-width="400"
-        :gap="24"
-        @redraw="toTop"
-      >
-        <template #default="{ item }">
-          <LetterCard
-            :id="item.id"
-            :name="item.name"
-            :top="item.top"
-            :bottom="item.bottom"
-            :content="item.content"
-          />
-        </template>
-      </masonry-wall>
+      <Transition name="fade" mode="out-in">
+        <div v-show="showWall" class="wall-container">
+          <masonry-wall
+            class="letter-wall"
+            :items="lettersPaginated"
+            :column-width="400"
+            :gap="24"
+            @redraw="wallLoaded"
+          >
+            <template #default="{ item }">
+              <LetterCard
+                :id="item.id"
+                :name="item.name"
+                :top="item.top"
+                :bottom="item.bottom"
+                :content="item.content"
+              />
+            </template>
+          </masonry-wall>
+        </div>
+      </Transition>
 
       <div class="page-switch">
         <PageSelect
@@ -51,6 +55,8 @@ export default {
     return {
       currentPage: parseInt(this.$route.params.page) || "1",
       lettersData: letters,
+      showWall: true,
+      timer: "",
     };
   },
   computed: {
@@ -77,12 +83,17 @@ export default {
   methods: {
     convertPxToRem,
     changePage(n) {
-      this.$router.push({
-        name: "message",
-        params: { page: n }
-      });
+      this.showWall = false;
+      clearTimeout(this.timer);
+      this.timer = setTimeout(() => {
+        this.$router.push({
+          name: "message",
+          params: { page: n }
+        });
+        this.showWall = true;
+      }, 300);
     },
-    toTop() {
+    wallLoaded() {
       window.scrollTo(0, 0);
     }
   },

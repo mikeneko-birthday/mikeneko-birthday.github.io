@@ -35,6 +35,10 @@ export default {
   }
   @media screen and (max-width: 48em) { // 48 * 16 = 768
     position: static;
+    .site-logo {
+      width: 10rem;
+      margin-right: auto;
+    }
   }
 }
 </style>
