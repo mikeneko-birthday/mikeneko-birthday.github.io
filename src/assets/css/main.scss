@@ -56,6 +56,10 @@ img, svg, .ov-icon {
   padding-right: 2rem;
   margin-left: auto;
   margin-right: auto;
+  @media screen and (max-width: 48em) { // 48 * 16 = 768
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }
 
 .ov-icon, .ov-icon :is(path, rect) {

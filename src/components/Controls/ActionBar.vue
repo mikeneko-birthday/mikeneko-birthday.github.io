@@ -22,5 +22,8 @@ export default {
   flex-flow: row nowrap;
   align-items: center;
   gap: 1rem;
+  @media screen and (max-width: 48em) { // 48 * 16 = 768
+    gap: 0.75rem;
+  }
 }
 </style>
