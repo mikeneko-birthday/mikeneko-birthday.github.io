@@ -10,7 +10,10 @@
           v-for="(link, index) in links"
           :key="link.class"
           :ref="link.name"
-          :class="link.class"
+          :class="[
+            link.class,
+            { 'link-active': $route.name === link.name }
+          ]"
           :data-pos="index+1"
         >
           <router-link :to="link.path" @click="hintRoute(link.text)">
@@ -243,11 +246,11 @@ export default {
         .link-text {
           display: none;
         }
-        &.router-link-active {
-          .link-icon {
-            filter: grayscale(0);
-            transform: translateY(-.5rem);
-          }
+      }
+      &.link-active {
+        .link-icon {
+          filter: grayscale(0);
+          transform: translateY(-.5rem);
         }
       }
     }
