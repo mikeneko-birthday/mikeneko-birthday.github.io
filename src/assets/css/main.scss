@@ -17,10 +17,10 @@
 html {
   font-size: 16px;
   font-family: "Zen Maru Gothic", Helvetica, Arial, sans-serif;
-  background: var(--bg-color);
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow: hidden auto;
   &[lang="zh"] {
     font-family: "FakePearl-Regular", sans-serif;
   }

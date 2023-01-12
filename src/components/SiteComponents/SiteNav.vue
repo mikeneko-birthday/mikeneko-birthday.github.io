@@ -1,28 +1,30 @@
 <template>
-  <nav class="site-nav" :style="{ '--nav-pos': indicatorPos }">
-    <div class="nav-indicator" />
-    <Transition name="fade">
-      <div v-show="showHint" class="nav-hint">{{ hintText }}</div>
-    </Transition>
-    <ul>
-      <li
-        v-for="(link, index) in links"
-        :key="link.class"
-        :ref="link.name"
-        :class="link.class"
-        :data-pos="index+1"
-      >
-        <router-link :to="link.path" @click="hintRoute(link.text)">
-          <div class="link-icon">
-            <img :src="link.icon" :alt="link.text">
-          </div>
-          <div class="link-text">
-            <span>{{ link.text }}</span>
-          </div>
-        </router-link>
-      </li>
-    </ul>
-  </nav>
+  <div class="nav-holder wrapper">
+    <nav class="site-nav" :style="{ '--nav-pos': indicatorPos }">
+      <div class="nav-indicator" />
+      <Transition name="fade">
+        <div v-show="showHint" class="nav-hint">{{ hintText }}</div>
+      </Transition>
+      <ul>
+        <li
+          v-for="(link, index) in links"
+          :key="link.class"
+          :ref="link.name"
+          :class="link.class"
+          :data-pos="index+1"
+        >
+          <router-link :to="link.path" @click="hintRoute(link.text)">
+            <div class="link-icon">
+              <img :src="link.icon" :alt="link.text">
+            </div>
+            <div class="link-text">
+              <span>{{ link.text }}</span>
+            </div>
+          </router-link>
+        </li>
+      </ul>
+    </nav>
+  </div>
 </template>
 
 <script>
@@ -89,14 +91,30 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.nav-holder {
+  display: block;
+  position: fixed;
+  top: calc(var(--header-height) + 2rem);
+  left: 50%;
+  width: 100%;
+  height: auto;
+  transform: translateX(-50%);
+  z-index: 1;
+  @media screen and (max-width: 48em) {
+    width: auto;
+    inset: auto auto 1rem 50%;
+  }
+}
 .site-nav {
-  isolation: isolate;
+  display: inline-block;
+  position: relative;
   background: #fff;
   box-shadow: var(--box-shadow);
   border-radius: calc(var(--nav-gap-width, .625rem) + var(--nav-item-size, 4rem) / 2);
   padding: var(--nav-gap-width, .625rem) var(--nav-LR-width, .625rem);
   // box-shadow: 0 .25rem 0.25rem #f7dee4;
   transition: padding .5s ease;
+  isolation: isolate;
   z-index: 1;
   .nav-indicator {
     text-align: center;
