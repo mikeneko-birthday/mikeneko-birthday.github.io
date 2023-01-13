@@ -6,6 +6,7 @@
 <script>
 import SiteBody from "./components/SiteComponents/SiteBody.vue";
 import SiteHeader from "./components/SiteComponents/SiteHeader.vue";
+import SiteNav from "./components/SiteComponents/SiteNav.vue";
 
 export default {
   components: { SiteHeader, SiteBody },
@@ -21,16 +22,22 @@ export default {
 </script>
 
 <style lang="scss">
+html {
+  background: var(--bg-color) url("@/assets/img/background.svg") repeat top center;
+  background-size: 350px;
+  background-attachment: fixed;
+}
+
 #app {
   --header-height: 8.125rem;
+  --nav-item-size: 4rem;
+  --nav-gap-width: .625rem;
+  --nav-LR-width: .625rem;
+  --nav-mobile-height: 5.25rem;
   display: flex;
   flex-flow: column nowrap;
-  height: 100vh;
-  height: 100dvh;
-  min-height: 100vh;
-  min-height: 100dvh;
-  background: #e0b4bf url("@/assets/img/background.svg") repeat center;
-  background-size: 350px;
+  // min-height: 100vh;
+  // min-height: 100dvh;
   &.cat-paw {
     * {
       cursor: url("@/assets/img/paw/cat_paw1.svg"), auto;
@@ -40,7 +47,7 @@ export default {
     }
   }
   @media screen and (max-width: 48em) { // 48 * 16 = 768
-    height: auto;
+    --nav-LR-width: 1.5rem;
   }
 }
 

@@ -1,28 +1,33 @@
 <template>
-  <nav class="site-nav" :style="{ '--nav-pos': indicatorPos }">
-    <div class="nav-indicator" />
-    <Transition name="fade">
-      <div v-show="showHint" class="nav-hint">{{ hintText }}</div>
-    </Transition>
-    <ul>
-      <li
-        v-for="(link, index) in links"
-        :key="link.class"
-        :ref="link.name"
-        :class="link.class"
-        :data-pos="index+1"
-      >
-        <router-link :to="link.path" @click="hintRoute(link.text)">
-          <div class="link-icon">
-            <img :src="link.icon" :alt="link.text">
-          </div>
-          <div class="link-text">
-            <span>{{ link.text }}</span>
-          </div>
-        </router-link>
-      </li>
-    </ul>
-  </nav>
+  <div class="nav-holder wrapper">
+    <nav class="site-nav" :style="{ '--nav-pos': indicatorPos }">
+      <div class="nav-indicator" />
+      <Transition name="fade">
+        <div v-show="showHint" class="nav-hint">{{ hintText }}</div>
+      </Transition>
+      <ul>
+        <li
+          v-for="(link, index) in links"
+          :key="link.class"
+          :ref="link.name"
+          :class="[
+            link.class,
+            { 'link-active': $route.name === link.name }
+          ]"
+          :data-pos="index+1"
+        >
+          <router-link :to="link.path" @click="hintRoute(link.text)">
+            <div class="link-icon">
+              <img :src="link.icon" :alt="link.text">
+            </div>
+            <div class="link-text">
+              <span>{{ link.text }}</span>
+            </div>
+          </router-link>
+        </li>
+      </ul>
+    </nav>
+  </div>
 </template>
 
 <script>
@@ -89,14 +94,28 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.nav-holder {
+  display: block;
+  position: absolute;
+  top: calc(var(--header-height) + 1.5rem);
+  left: 0;
+  height: auto;
+  @media screen and (max-width: 48em) {
+    position: fixed;
+    inset: auto auto 1rem 50%;
+    transform: translateX(-50%);
+  }
+}
 .site-nav {
-  isolation: isolate;
+  display: inline-block;
+  position: relative;
   background: #fff;
   box-shadow: var(--box-shadow);
   border-radius: calc(var(--nav-gap-width, .625rem) + var(--nav-item-size, 4rem) / 2);
   padding: var(--nav-gap-width, .625rem) var(--nav-LR-width, .625rem);
   // box-shadow: 0 .25rem 0.25rem #f7dee4;
   transition: padding .5s ease;
+  isolation: isolate;
   z-index: 1;
   .nav-indicator {
     text-align: center;
@@ -225,11 +244,11 @@ export default {
         .link-text {
           display: none;
         }
-        &.router-link-active {
-          .link-icon {
-            filter: grayscale(0);
-            transform: translateY(-.5rem);
-          }
+      }
+      &.link-active {
+        .link-icon {
+          filter: grayscale(0);
+          transform: translateY(-.5rem);
         }
       }
     }

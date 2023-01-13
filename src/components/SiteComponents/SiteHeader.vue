@@ -3,15 +3,17 @@
     <div class="wrapper">
       <img alt="logo" class="site-logo" src="@/assets/logo.svg" @click="switchCursor">
       <ActionBar />
+      <SiteNav />
     </div>
   </header>
 </template>
 
 <script>
 import ActionBar from "../Controls/ActionBar.vue";
+import SiteNav from "./SiteNav.vue";
 
 export default {
-  components: { ActionBar }
+  components: { ActionBar, SiteNav }
 };
 </script>
 
@@ -23,7 +25,7 @@ export default {
   height: var(--header-height);
   border-top: .5rem solid var(--color-main);
   background: #fff;
-  z-index: 1;
+  z-index: 2;
   .wrapper {
     display: flex;
     flex-flow: row nowrap;

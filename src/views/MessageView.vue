@@ -39,7 +39,7 @@
 import SiteContent from "@/components/SiteComponents/SiteContent.vue";
 import LetterCard from "@/components/LetterCard.vue";
 
-import letters from "@/data/letter_demo";
+import letters from "@/data/letters";
 import { convertPxToRem } from "@/utils/function";
 import PageSelect from "@/components/Widget/PageSelect.vue";
 
