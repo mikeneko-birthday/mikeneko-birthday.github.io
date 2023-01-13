@@ -16,7 +16,7 @@
         :alt="`${name} の手紙`"
       >
       <div class="overlay">
-        <button class="zoom-in" @click="viewPhoto">
+        <button type="button" class="zoom-in" @click="viewPhoto">
           <v-icon name="bi-zoom-in" />
         </button>
       </div>
