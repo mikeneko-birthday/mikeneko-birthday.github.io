@@ -6,6 +6,7 @@
         :items="drawingData"
         :column-width="400"
         :gap="24"
+        @redraw="wallLoaded"
       >
         <template #default="{ item }">
           <DrawingCard
@@ -32,6 +33,11 @@ export default {
     return {
       drawingData: drawing,
     };
+  },
+  methods: {
+    wallLoaded() {
+      window.scrollTo(0, 0);
+    }
   },
 };
 </script>

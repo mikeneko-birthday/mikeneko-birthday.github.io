@@ -18,10 +18,12 @@
     <div class="drawing-photo other-paw">
       <img
         ref="photo"
+        class="drawing-image"
         :src="thumbnailLink"
         :data-source="originalLink"
         :alt="`${name} のイラスト`"
       >
+      <img class="drawer-sign" :src="signLink" :alt="`${name} のサイン`">
       <!-- <div class="overlay">
         <button class="zoom-in" @click="viewPhoto">
           <v-icon name="bi-zoom-in" />
@@ -58,6 +60,9 @@ export default {
     },
     originalLink() {
       return require(`@/assets/img/drawings/${this.id}.jpg`);
+    },
+    signLink() {
+      return require(`@/assets/img/drawings/sign/${this.id}.png`);
     },
   },
   methods: {
@@ -114,6 +119,18 @@ export default {
           }
         }
       }
+    }
+  }
+  .drawing-photo {
+    cursor: pointer;
+    position: relative;
+    .drawer-sign {
+      position: absolute;
+      bottom: 1rem;
+      right: 1rem;
+      max-width: 30%;
+      max-height: 6.25rem;
+      pointer-events: none;
     }
   }
 
