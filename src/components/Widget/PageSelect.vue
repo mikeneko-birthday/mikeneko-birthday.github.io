@@ -5,7 +5,7 @@
       { 'has-bg': hasBackground }
     ]"
   >
-    <button v-show="currentPage > 1" class="btn-control btn-prev" @click="$emit('changePage', currentPage - 1)">
+    <button v-show="currentPage > 1" type="button" class="btn-control btn-prev" @click="$emit('changePage', currentPage - 1)">
       <inline-svg
         :src="catPaw"
         aria-hidden="false"
@@ -24,7 +24,7 @@
         {{ n }}
       </a>
     </div>
-    <button v-show="currentPage < max" class="btn-control btn-next" @click="$emit('changePage', currentPage + 1)">
+    <button v-show="currentPage < max" type="button" class="btn-control btn-next" @click="$emit('changePage', currentPage + 1)">
       <inline-svg
         :src="catPaw"
         aria-hidden="false"

@@ -1,7 +1,7 @@
 const messages = {
   "en": {
     "General": {
-      projectName: "Mikeneko Birthday Celebration Project 2023",
+      projectName: "#Mikeneko_Birthday_Celebration_Project_2023",
       groupName: "Mikeneko's Cat Bed"
     },
     "Section": {
@@ -33,7 +33,7 @@ const messages = {
   },
   "zh": {
     "General": {
-      projectName: "みけねこ生日紀念計劃2023",
+      projectName: "#みけねこ生日紀念計劃2023",
       groupName: "みけねこの貓窩"
     },
     "Section": {
@@ -65,7 +65,7 @@ const messages = {
   },
   "ja": {
     "General": {
-      projectName: "みけねこお誕生日記念計画2023",
+      projectName: "#みけねこお誕生日記念2023",
       groupName: "みけねこの貓窩"
     },
     "Section": {

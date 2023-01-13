@@ -5,7 +5,7 @@
       <PawLine up-down-style />
 
       <ContentBlock class="celebrate-draw" :title="$t('Home.draw.title')">
-        <div class="block-media" v-viewer.static="{ 'navbar': false }">
+        <div class="block-media other-paw" v-viewer.static="{ 'navbar': false }">
           <img src="@/assets/img/water/mikeneko-bd1.png" alt="Mikeneko birthday celebration drawing">
         </div>
         <div class="block-content" v-html="$t('Home.video.content')"></div>
@@ -19,7 +19,7 @@
       </ContentBlock>
 
       <ContentBlock class="celebrate-minecraft" :title="$t('Home.minecraft.title')">
-        <div class="block-media" v-viewer.static="{ 'navbar': false }">
+        <div class="block-media other-paw" v-viewer.static="{ 'navbar': false }">
           <img src="@/assets/img/water/mikeneko-bd1.png" alt="Mikeneko birthday celebration drawing">
         </div>
         <div class="block-content" v-html="$t('Home.video.content')"></div>

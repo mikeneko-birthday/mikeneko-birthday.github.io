@@ -1,6 +1,6 @@
 <template>
   <div class="cursor-switch">
-    <button class="cursor-button" @click="changeCursor">
+    <button type="button" class="cursor-button" @click="changeCursor">
       <v-icon v-if="cursorType == 'catpaw'" name="fa-paw" />
       <v-icon v-else name="bi-cursor-fill" flip="horizontal"/>
     </button>

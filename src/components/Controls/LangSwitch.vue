@@ -1,7 +1,7 @@
 <template>
   <div class="lang-switch">
     <!-- Change to component la -->
-    <button class="lang-button" @click="toggleList" @blur="closeList">
+    <button type="button" class="lang-button" @click="toggleList" @blur="closeList">
       <v-icon name="io-language" />
     </button>
     <TransitionGroup name="list-stagger" tag="ul" class="lang-list">
@@ -18,7 +18,7 @@
           'transition-delay': showUp ? `calc(${index} * var(--list-stagger-time) / 2)` : `calc(${langList.length - index} * var(--list-stagger-time) / 2)`
         }"
       >
-        <button @click="changeLang(lang.code)">
+        <button type="button" @click="changeLang(lang.code)">
           <img :src="lang.img" :alt="lang.code">
         </button>
       </li>

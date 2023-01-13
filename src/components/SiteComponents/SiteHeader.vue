@@ -1,7 +1,11 @@
 <template>
   <header class="site-header">
     <div class="wrapper">
-      <img alt="logo" class="site-logo" src="@/assets/logo.svg" @click="switchCursor">
+      <div class="logo-holder">
+        <router-link :to="{ name: 'home' }">
+          <img alt="logo" class="site-logo" src="@/assets/logo.svg" @click="switchCursor">
+        </router-link>
+      </div>
       <ActionBar />
       <SiteNav />
     </div>
@@ -31,9 +35,11 @@ export default {
     flex-flow: row nowrap;
     align-items: center;
   }
+  .logo-holder {
+    margin-right: auto;
+  }
   .site-logo {
     width: 12.5rem;
-    margin-right: auto;
   }
   @media screen and (max-width: 48em) { // 48 * 16 = 768
     position: static;

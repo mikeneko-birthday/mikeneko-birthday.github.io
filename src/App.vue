@@ -1,12 +1,12 @@
 <template>
   <SiteHeader />
   <SiteBody />
+  <div class="web-bg" />
 </template>
 
 <script>
 import SiteBody from "./components/SiteComponents/SiteBody.vue";
 import SiteHeader from "./components/SiteComponents/SiteHeader.vue";
-import SiteNav from "./components/SiteComponents/SiteNav.vue";
 
 export default {
   components: { SiteHeader, SiteBody },
@@ -22,12 +22,6 @@ export default {
 </script>
 
 <style lang="scss">
-html {
-  background: var(--bg-color) url("@/assets/img/background.svg") repeat top center;
-  background-size: 350px;
-  background-attachment: fixed;
-}
-
 #app {
   --header-height: 8.125rem;
   --nav-item-size: 4rem;
@@ -36,13 +30,12 @@ html {
   --nav-mobile-height: 5.25rem;
   display: flex;
   flex-flow: column nowrap;
-  // min-height: 100vh;
-  // min-height: 100dvh;
   &.cat-paw {
+    cursor: url("@/assets/img/paw/cat_paw1.svg"), auto;
     * {
-      cursor: url("@/assets/img/paw/cat_paw1.svg"), auto;
+      cursor: inherit;
     }
-    a {
+    .other-paw, button, a {
       cursor: url("@/assets/img/paw/cat_paw2.svg"), pointer;
     }
   }
@@ -53,5 +46,16 @@ html {
 
 .view {
   --router-fade-time: 0.3s;
+}
+
+.web-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -2;
+  background: var(--bg-color) url("@/assets/img/background.svg") repeat top center;
+  background-size: 350px;
 }
 </style>
