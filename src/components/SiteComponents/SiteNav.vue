@@ -96,16 +96,14 @@ export default {
 <style lang="scss" scoped>
 .nav-holder {
   display: block;
-  position: fixed;
-  top: calc(var(--header-height) + 2rem);
-  left: 50%;
-  width: 100%;
+  position: absolute;
+  top: calc(var(--header-height) + 1.5rem);
+  left: 0;
   height: auto;
-  transform: translateX(-50%);
-  z-index: 1;
   @media screen and (max-width: 48em) {
-    width: auto;
+    position: fixed;
     inset: auto auto 1rem 50%;
+    transform: translateX(-50%);
   }
 }
 .site-nav {

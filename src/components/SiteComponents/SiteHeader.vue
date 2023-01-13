@@ -3,15 +3,17 @@
     <div class="wrapper">
       <img alt="logo" class="site-logo" src="@/assets/logo.svg" @click="switchCursor">
       <ActionBar />
+      <SiteNav />
     </div>
   </header>
 </template>
 
 <script>
 import ActionBar from "../Controls/ActionBar.vue";
+import SiteNav from "./SiteNav.vue";
 
 export default {
-  components: { ActionBar }
+  components: { ActionBar, SiteNav }
 };
 </script>
 

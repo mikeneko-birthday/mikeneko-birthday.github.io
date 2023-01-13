@@ -1,6 +1,5 @@
 <template>
   <SiteHeader />
-  <SiteNav />
   <SiteBody />
 </template>
 
@@ -10,7 +9,7 @@ import SiteHeader from "./components/SiteComponents/SiteHeader.vue";
 import SiteNav from "./components/SiteComponents/SiteNav.vue";
 
 export default {
-  components: { SiteHeader, SiteBody, SiteNav },
+  components: { SiteHeader, SiteBody },
   mounted() {
     if (!localStorage.cursor) {
       localStorage.cursor = "catpaw";
