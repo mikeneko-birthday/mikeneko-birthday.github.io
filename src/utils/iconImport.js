@@ -4,6 +4,7 @@ import {
   BiCursorFill,
   BiZoomIn,
   FaPaw,
+  FaTwitter,
   IoLanguage,
 } from "oh-vue-icons/icons";
 
@@ -11,6 +12,7 @@ addIcons(
   BiCursorFill,
   BiZoomIn,
   FaPaw,
+  FaTwitter,
   IoLanguage,
 );
 

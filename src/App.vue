@@ -30,8 +30,6 @@ export default {
   --nav-mobile-height: 5.25rem;
   display: flex;
   flex-flow: column nowrap;
-  // min-height: 100vh;
-  // min-height: 100dvh;
   &.cat-paw {
     cursor: url("@/assets/img/paw/cat_paw1.svg"), auto;
     * {
