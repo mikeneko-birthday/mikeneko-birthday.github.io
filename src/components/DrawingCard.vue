@@ -122,7 +122,7 @@ export default {
     }
   }
   .drawing-photo {
-    cursor: pointer;
+    cursor: zoom-in;
     position: relative;
     .drawer-sign {
       position: absolute;
