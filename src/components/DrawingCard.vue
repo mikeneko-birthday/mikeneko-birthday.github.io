@@ -18,8 +18,8 @@
     <div class="drawing-photo other-paw">
       <img
         ref="photo"
-        :src="require(`@/assets/img/drawings/thumbnail/${id}.jpg`)"
-        :data-source="require(`@/assets/img/drawings/${id}.jpg`)"
+        :src="thumbnailLink"
+        :data-source="originalLink"
         :alt="`${name} のイラスト`"
       >
       <!-- <div class="overlay">
@@ -50,6 +50,14 @@ export default {
     drawerIcon: {
       type: String,
       default: "nekofami1.png"
+    }
+  },
+  computed: {
+    thumbnailLink() {
+      return require(`@/assets/img/drawings/thumbnail/${this.id}.jpg`);
+    },
+    originalLink() {
+      return require(`@/assets/img/drawings/${this.id}.jpg`);
     },
   },
   methods: {
@@ -107,6 +115,10 @@ export default {
         }
       }
     }
+  }
+
+  @media screen and (max-width: 62.5em) {
+    max-width: 31.25rem;
   }
 
   @media screen and (max-width: 30em) {

@@ -1,8 +1,8 @@
 <template>
   <SiteContent>
-    <section class="view view-illustration" v-viewer>
+    <section class="view view-illustration" v-viewer="{ url: 'data-source' }">
       <masonry-wall
-        class="letter-wall"
+        class="drawing-wall"
         :items="drawingData"
         :column-width="400"
         :gap="24"
@@ -38,10 +38,8 @@ export default {
 
 <style lang="scss">
 .view-illustration {
-  @media screen and (max-width: 62.5em) {
-    .letter {
-      max-width: 31.25rem;
-    }
+  .drawing-wall .masonry-column {
+    align-items: center;
   }
 }
 </style>
