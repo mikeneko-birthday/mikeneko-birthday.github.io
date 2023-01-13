@@ -8,7 +8,7 @@
       <div class="letter-bottom">{{ bottom }}</div>
     </div>
 
-    <div class="letter-photo">
+    <div class="letter-photo other-paw">
       <img ref="photo" :src="require(`@/assets/img/letters/${id}.jpg`)" :alt="`${name} の手紙`">
       <div class="overlay">
         <button class="zoom-in" @click="viewPhoto">

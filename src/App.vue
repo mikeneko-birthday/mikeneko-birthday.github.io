@@ -6,7 +6,6 @@
 <script>
 import SiteBody from "./components/SiteComponents/SiteBody.vue";
 import SiteHeader from "./components/SiteComponents/SiteHeader.vue";
-import SiteNav from "./components/SiteComponents/SiteNav.vue";
 
 export default {
   components: { SiteHeader, SiteBody },
@@ -39,10 +38,11 @@ html {
   // min-height: 100vh;
   // min-height: 100dvh;
   &.cat-paw {
+    cursor: url("@/assets/img/paw/cat_paw1.svg"), auto;
     * {
-      cursor: url("@/assets/img/paw/cat_paw1.svg"), auto;
+      cursor: inherit;
     }
-    a {
+    .other-paw, button, a {
       cursor: url("@/assets/img/paw/cat_paw2.svg"), pointer;
     }
   }
