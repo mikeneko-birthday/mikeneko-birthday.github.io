@@ -1,5 +1,23 @@
 const drawing = [
   {
+    "id": "8",
+    "name": "水",
+    "twitterId": "cantdraw0",
+    "drawerIcon": "1",
+  },
+  {
+    "id": "9",
+    "name": "Milktea",
+    "twitterId": "Milk_Tea_1993",
+    "drawerIcon": "2",
+  },
+  {
+    "id": "5",
+    "name": "Milktea",
+    "twitterId": "Milk_Tea_1993",
+    "drawerIcon": "1",
+  },
+  {
     "id": "1",
     "name": "アオイ",
     "twitterId": "Aoi_TW_819",
@@ -24,12 +42,6 @@ const drawing = [
     "drawerIcon": "1",
   },
   {
-    "id": "5",
-    "name": "Milktea",
-    "twitterId": "Milk_Tea_1993",
-    "drawerIcon": "1",
-  },
-  {
     "id": "6",
     "name": "元氣",
     "twitterId": "Genki1280",
@@ -41,18 +53,6 @@ const drawing = [
     "twitterId": "T_xiaoying7",
     "drawerIcon": "2",
   },
-  {
-    "id": "8",
-    "name": "水",
-    "twitterId": "cantdraw0",
-    "drawerIcon": "1",
-  },
-  {
-    "id": "9",
-    "name": "Milktea",
-    "twitterId": "Milk_Tea_1993",
-    "drawerIcon": "2",
-  }
 ];
 
 export default drawing;
