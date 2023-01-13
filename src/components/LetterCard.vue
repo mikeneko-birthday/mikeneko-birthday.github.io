@@ -9,7 +9,7 @@
     </div>
 
     <div class="letter-photo">
-      <img ref="photo" :src="require(`@/assets/img/letters/2001.jpg`)" :alt="`${name} の手紙`">
+      <img ref="photo" :src="require(`@/assets/img/letters/${id}.jpg`)" :alt="`${name} の手紙`">
       <div class="overlay">
         <button class="zoom-in" @click="viewPhoto">
           <v-icon name="bi-zoom-in" />
@@ -62,13 +62,21 @@ export default {
   &-txt {
     padding: .75rem 1rem;
   }
+  &-top, &-bottom, &-content p {
+    white-space: pre-line;
+  }
   &-top, &-bottom {
     font-size: 1.125em;
     font-weight: bold;
   }
   &-top {
     color: var(--color-main);
-    margin-bottom: .5rem;
+    margin-bottom: .75rem;
+  }
+  &-content {
+    p {
+      margin-top: 0.5rem;
+    }
   }
   &-bottom {
     color: var(--color-sub);
