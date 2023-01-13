@@ -1,2 +1,0 @@
-"use strict";(self["webpackChunkmikeneko_birthday"]=self["webpackChunkmikeneko_birthday"]||[]).push([[443],{4367:function(n,t,e){e.r(t),e.d(t,{default:function(){return l}});var u=e(3396);const o=(0,u._)("section",{class:"view view-about"},[(0,u._)("h1",null,"About")],-1);function i(n,t,e,i,r,c){const s=(0,u.up)("SiteContent");return(0,u.wg)(),(0,u.j4)(s,null,{default:(0,u.w5)((()=>[o])),_:1})}var r=e(836),c={components:{SiteContent:r.Z}},s=e(89);const a=(0,s.Z)(c,[["render",i]]);var l=a}}]);
-//# sourceMappingURL=about.6e4d18e9.js.map
