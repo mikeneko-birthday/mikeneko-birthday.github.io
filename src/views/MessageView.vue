@@ -1,6 +1,6 @@
 <template>
   <SiteContent>
-    <section class="view view-messages" v-viewer>
+    <section class="view view-messages" v-viewer="{ url: 'data-source' }">
       <Transition name="fade" mode="out-in">
         <div v-show="showWall" class="wall-container">
           <masonry-wall

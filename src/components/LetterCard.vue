@@ -9,7 +9,12 @@
     </div>
 
     <div class="letter-photo other-paw">
-      <img ref="photo" :src="require(`@/assets/img/letters/${id}.jpg`)" :alt="`${name} の手紙`">
+      <img
+        ref="photo"
+        :src="require(`@/assets/img/letters/thumbnail/${id}.jpg`)"
+        :data-source="require(`@/assets/img/letters/${id}.jpg`)"
+        :alt="`${name} の手紙`"
+      >
       <div class="overlay">
         <button class="zoom-in" @click="viewPhoto">
           <v-icon name="bi-zoom-in" />
