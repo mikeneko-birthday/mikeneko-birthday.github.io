@@ -1,6 +1,7 @@
 <template>
   <SiteHeader />
   <SiteBody />
+  <div class="web-bg" />
 </template>
 
 <script>
@@ -21,12 +22,6 @@ export default {
 </script>
 
 <style lang="scss">
-html {
-  background: var(--bg-color) url("@/assets/img/background.svg") repeat top center;
-  background-size: 350px;
-  background-attachment: fixed;
-}
-
 #app {
   --header-height: 8.125rem;
   --nav-item-size: 4rem;
@@ -53,5 +48,16 @@ html {
 
 .view {
   --router-fade-time: 0.3s;
+}
+
+.web-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -2;
+  background: var(--bg-color) url("@/assets/img/background.svg") repeat top center;
+  background-size: 350px;
 }
 </style>
