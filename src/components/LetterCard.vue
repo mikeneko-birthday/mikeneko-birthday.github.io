@@ -10,9 +10,7 @@
 
     <div class="letter-photo other-paw">
       <img
-        ref="photo"
         :src="require(`@/assets/img/letters/thumbnail/${id}.jpg`)"
-        :data-source="require(`@/assets/img/letters/${id}.jpg`)"
         :alt="`${name} の手紙`"
       >
       <div class="overlay">
@@ -51,7 +49,7 @@ export default {
   },
   methods: {
     viewPhoto() {
-      this.$refs.photo.click();
+      this.$emit("photoClicked");
     }
   },
 };
@@ -130,11 +128,9 @@ export default {
   @media screen and (max-width: 48em) {
     &-photo {
       .overlay {
+        inset: auto .5rem .5rem auto;
         opacity: 1;
         .zoom-in {
-          position: absolute;
-          bottom: 0.5rem;
-          right: 0.5rem;
           width: auto;
           height: auto;
           padding: .5rem;
