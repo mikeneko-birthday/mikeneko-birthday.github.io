@@ -163,12 +163,12 @@ export default {
       font-family: "FakePearl-Regular", sans-serif;
       width: 2.5rem;
       height: 2.5rem;
-      line-height: 2.5rem;
       background: transparent;
       border-radius: 5rem;
       transition: background .3s ease;
     }
     .page-num {
+      line-height: 2.5rem;
       &.page-active {
         background: var(--color-sub-light);
       }
