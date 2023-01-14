@@ -115,15 +115,18 @@ export default {
         height: 3.5rem;
       }
     }
-    &:hover {
-      img {
-        transform: scale(1.1);
-      }
-      .overlay {
-        opacity: 1;
+    @media screen and (min-width: 48.0625em) {
+      &:hover {
+        img {
+          transform: scale(1.1);
+        }
+        .overlay {
+          opacity: 1;
+        }
       }
     }
   }
+
   @media screen and (max-width: 48em) {
     &-photo {
       .overlay {
