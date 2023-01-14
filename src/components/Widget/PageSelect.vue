@@ -174,7 +174,7 @@ export default {
       }
     }
     .page-input {
-      // display: none;
+      display: none;
       text-align: center;
       border: none;
       outline: none;
