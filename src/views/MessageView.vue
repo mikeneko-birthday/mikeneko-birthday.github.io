@@ -110,8 +110,29 @@ export default {
         },
         images: this.sourceImageList,
       });
-    }
+    },
+    isPageOutRange(p) {
+      return p < 1 || p > this.maxPage;
+    },
   },
+  beforeRouteEnter(to, from, next) {
+    next(vm => {
+      if (vm.isPageOutRange(parseInt(to.params.page))) {
+        vm.$router.replace({
+          name: "message",
+          params: { page: 1 }
+        });
+      }
+    });
+  },
+  beforeRouteUpdate(to) {
+    if (this.isPageOutRange(parseInt(to.params.page))) {
+      this.$router.replace({
+        name: "message",
+        params: { page: 1 }
+      });
+    }
+  }
 };
 </script>
 
