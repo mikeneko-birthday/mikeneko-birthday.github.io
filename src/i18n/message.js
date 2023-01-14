@@ -1,7 +1,7 @@
 const messages = {
   "en": {
     "General": {
-      projectName: "#Mikeneko_Birthday_Celebration_Project_2023",
+      projectName: "#Mikeneko Birthday Celebration Project 2023",
       groupName: "Mikeneko's Cat Bed"
     },
     "Section": {
