@@ -10,13 +10,14 @@
             :gap="24"
             @redraw="wallLoaded"
           >
-            <template #default="{ item }">
+            <template #default="{ item, index }">
               <LetterCard
                 :id="item.id"
                 :name="item.name"
                 :top="item.top"
                 :bottom="item.bottom"
                 :content="item.content"
+                @photoClicked="viewPhoto(index, item.name)"
               />
             </template>
           </masonry-wall>
@@ -68,6 +69,14 @@ export default {
     lettersPaginated() {
       return this.lettersData.slice(this.indexStart, this.indexEnd);
     },
+    sourceImageList() {
+      return this.lettersPaginated.map(letter => {
+        return {
+          src: require(`@/assets/img/letters/${letter.id}.jpg`),
+          alt: `${letter.name} の手紙`,
+        };
+      });
+    },
     maxPage() {
       return Math.ceil(this.lettersData.length / this.itemPerPage);
     },
@@ -93,6 +102,14 @@ export default {
     },
     wallLoaded() {
       window.scrollTo(0, 0);
+    },
+    viewPhoto(index) {
+      this.$viewerApi({
+        options: {
+          initialViewIndex: index
+        },
+        images: this.sourceImageList,
+      });
     }
   },
 };
@@ -116,8 +133,6 @@ export default {
 
   .page-switch {
     text-align: center;
-  }
-  .page-select {
     margin: 2rem 0;
   }
 }
