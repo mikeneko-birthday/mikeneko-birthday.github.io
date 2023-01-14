@@ -116,8 +116,6 @@ export default {
 
   .page-switch {
     text-align: center;
-  }
-  .page-select {
     margin: 2rem 0;
   }
 }
