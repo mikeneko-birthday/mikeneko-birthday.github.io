@@ -23,6 +23,19 @@ const messages = {
         title: "Fan-made Minecraft Map Art",
         content: "Combining the fan art created by 8 illustrators in the past year, which concentrated all the happiness in a year and express it with Minecraft map art. We want to give our best wishes to Mikeneko and look forward to having more happy moments in the future."
       }
+    },
+    "Profile": {
+      posts: "{count} posts",
+      followers: "{count} followers",
+      following: "{count} following",
+      introduction: "Introduction Dummy",
+      blessing: "Blessing Dummy",
+      credits: {
+        artists: "Artists",
+        assistants: "Assistants",
+        leads: "Leads",
+        developers: "Developers"
+      }
     }
   },
   "zh": {
@@ -49,6 +62,19 @@ const messages = {
         title: "粉絲們製作的Minecraft地圖繪",
         content: "將8位繪師老師這一年來的作品剪裁、拼貼，濃縮了一年份的歡笑，最後用Minecraft地圖繪的方式來呈現。是我們為みけねこ獻上的生日祝福，同時期許新的一年我們能創造更多歡樂的美好時光。"
       }
+    },
+    "Profile": {
+      posts: "{count}篇貼文",
+      followers: "{count}個跟隨中",
+      following: "{count}位跟隨者",
+      introduction: "Introduction Dummy",
+      blessing: "Blessing Dummy",
+      credits: {
+        artists: "畫師",
+        assistants: "協助者",
+        leads: "統籌",
+        developers: "程式設計"
+      }
     }
   },
   "ja": {
@@ -74,6 +100,19 @@ const messages = {
       "minecraft": {
         title: "ファン達作ったマップアート",
         content: "8人の絵師さんの去年のファンアートを編集して、最後にマイクラ地上絵で皆様に去年1年分の笑いを届きます。この絵は私たちがみけねこちゃんに送る誕生日のお祝いでもあり、同時に新しい一年はもっと楽しい時間を一緒に過ごすことの期待でもあります。"
+      }
+    },
+    "Profile": {
+      posts: "投稿{count}件",
+      followers: "フォロワー{count}人",
+      following: "フォロー中{count}人",
+      introduction: "Introduction Dummy",
+      blessing: "Blessing Dummy",
+      credits: {
+        artists: "絵師",
+        assistants: "お手伝い",
+        leads: "担当者",
+        developers: "開発者"
       }
     }
   },
