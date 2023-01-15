@@ -7,7 +7,7 @@
       <div class="drawer-info">
         <div class="drawer-name">{{ name }}</div>
         <div class="drawer-twitter">
-          <a :href="`https://twitter.com/${twitterId}`" target="_blank">
+          <a :href="`https://twitter.com/${twitterId}`" target="_blank" rel="noopener noreferrer">
             @{{ twitterId }}
             <v-icon name="fa-twitter" />
           </a>
