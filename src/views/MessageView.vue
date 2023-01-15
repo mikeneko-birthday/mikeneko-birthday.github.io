@@ -12,6 +12,7 @@
           >
             <template #default="{ item, index }">
               <LetterCard
+                :class="{ 'oliver-letter': item.id === '0001' }"
                 :id="item.id"
                 :name="item.name"
                 :top="item.top"

@@ -62,31 +62,31 @@ export default {
   border-top: .5rem solid var(--color-main);
   box-shadow: 0 .25rem .5rem 0 rgba(0,0,0,.15);
   overflow: hidden;
-  &-txt {
+  .letter-txt {
     padding: .75rem 1rem;
   }
-  &-top, &-bottom, &-content p {
+  .letter-top, .letter-bottom, .letter-content p {
     white-space: pre-line;
   }
-  &-top, &-bottom {
+  .letter-top, .letter-bottom {
     font-size: 1.125em;
     font-weight: bold;
   }
-  &-top {
+  .letter-top {
     color: var(--color-main);
     margin-bottom: .75rem;
   }
-  &-content {
+  .letter-content {
     p {
       margin-top: 0.5rem;
     }
   }
-  &-bottom {
+  .letter-bottom {
     color: var(--color-sub);
     text-align: right;
     margin-top: .5rem;
   }
-  &-photo {
+  .letter-photo {
     position: relative;
     max-height: 18.75rem;
     overflow: hidden;
@@ -125,8 +125,16 @@ export default {
     }
   }
 
+  &.oliver-letter {
+    .letter-photo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
   @media screen and (max-width: 48em) {
-    &-photo {
+    .letter-photo {
       .overlay {
         inset: auto .5rem .5rem auto;
         opacity: 1;
