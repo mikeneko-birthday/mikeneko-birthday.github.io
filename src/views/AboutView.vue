@@ -1,17 +1,17 @@
 <template>
   <SiteContent>
     <section class="view view-about">
-      <div class="profile_page">
-        <div class="profile_card">
-          <div class="profile_picture">
-            <img class="profile_photo" src="@/assets/img/user_icon/mikeneko_icon.jpg" alt="Mikeneko Profile Icon">
+      <div class="profile-page">
+        <div class="profile-card">
+          <div class="profile-picture">
+            <img class="profile-photo" src="@/assets/img/user_icon/mikeneko_icon.jpg" alt="Mikeneko Profile Icon">
           </div>
-          <div class="profile_content">
-            <h2 class="profile_name">@95rn16</h2>
-            <ul class="profile_status_frame">
-              <li class="profile_status_content">{{ this.$t("Profile.posts", { count: "?" }) }}</li>
-              <li class="profile_status_content">{{ this.$t("Profile.followers", { count: "?" }) }}</li>
-              <li class="profile_status_content">{{ this.$t("Profile.following", { count: "?" }) }}</li>
+          <div class="profile-content">
+            <h2 class="profile-name">みけねこch</h2>
+            <ul class="profile-status-frame">
+              <li class="profile-status-content">{{ this.$t("Profile.posts", { count: "?" }) }}</li>
+              <li class="profile-status-content">{{ this.$t("Profile.followers", { count: "?" }) }}</li>
+              <li class="profile-status-content">{{ this.$t("Profile.following", { count: "?" }) }}</li>
             </ul>
             <p class="introduction">{{ this.$t("Profile.introduction") }}</p>
             <a href="https://www.youtube.com/@user-vh4mj4ko6u" target="_blank" rel="noopener noreferrer"><v-icon
@@ -22,20 +22,20 @@
           </div>
         </div>
         <hr>
-        <video class="introduction_video">mikeneko intro video here</video>
-        <div class="blessing_container">
+        <video class="introduction-video">mikeneko intro video here</video>
+        <div class="blessing-container">
           <p class="blessing">{{ this.$t("Profile.blessing") }}</p>
         </div>
         <div class="credits">
-          <div class="credits_title">Credits</div>
-          <div class="credits_categories">{{ this.$t("Profile.credits.artists") }}</div>
-          <div class="credits_categories">{{ this.$t("Profile.credits.assistants") }}</div>
-          <div class="credits_contents">Artist List</div>
-          <div class="credits_contents">Assistants List</div>
-          <div class="credits_categories">{{ this.$t("Profile.credits.leads") }}</div>
-          <div class="credits_categories">{{ this.$t("Profile.credits.developers") }}</div>
-          <div class="credits_contents">Leads List</div>
-          <div class="credits_contents">Developers List</div>
+          <div class="credits-title">Credits</div>
+          <div class="credits-categories">{{ this.$t("Profile.credits.artists") }}</div>
+          <div class="credits-categories">{{ this.$t("Profile.credits.assistants") }}</div>
+          <div class="credits-contents">Artist List</div>
+          <div class="credits-contents">Assistants List</div>
+          <div class="credits-categories">{{ this.$t("Profile.credits.leads") }}</div>
+          <div class="credits-categories">{{ this.$t("Profile.credits.developers") }}</div>
+          <div class="credits-contents">Leads List</div>
+          <div class="credits-contents">Developers List</div>
         </div>
       </div>
     </section>
@@ -51,42 +51,42 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.profile_page {
+.profile-page {
   padding: 0 10rem;
 }
 
-.profile_card {
+.profile-card {
   padding: 2rem;
   display: flex;
 }
 
-.profile_picture {
+.profile-picture {
   width: 25vw;
 }
 
-.profile_photo {
+.profile-photo {
   border-radius: 50%;
 }
 
-.profile_content {
+.profile-content {
   width: 75vw;
 }
 
-.profile_name {}
+.profile-name {}
 
-.profile_status_frame {
+.profile-status-frame {
   display: flex;
   list-style: none;
   margin-bottom: 1.5rem;
 }
 
-.profile_status_content {
+.profile-status-content {
   margin-left: 2.5rem;
 }
 
-.introduction_video {}
+.introduction-video {}
 
-.blessing_container {
+.blessing-container {
   padding: 2.5rem 5rem;
 }
 
@@ -99,17 +99,17 @@ export default {
   text-align: center;
 }
 
-.credits_title {
+.credits-title {
   height: 10%;
   width: 100%;
 }
 
-.credits_categories {
+.credits-categories {
   height: 10%;
   width: 50%;
 }
 
-.credits_contents {
+.credits-contents {
   height: 35%;
   width: 50%;
 }
