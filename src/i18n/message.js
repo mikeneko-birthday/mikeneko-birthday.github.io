@@ -13,21 +13,15 @@ const messages = {
     "Home": {
       "draw": {
         title: "Happy Birthday 2023 To Our Mikeneko!",
-        content: `
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus obcaecati veritatis quam tempore fugit consectetur libero enim harum ad necessitatibus voluptatibus sint, error est doloribus facere dicta odio iure eaque.</p>
-        `
+        content: "We collected 9 birthday arts from 8 illustrator. To deliver our best wishes to our dear Mikeneko!"
       },
       "video": {
         title: "Birthday Celebration Video",
-        content: `
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus obcaecati veritatis quam tempore fugit consectetur libero enim harum ad necessitatibus voluptatibus sint, error est doloribus facere dicta odio iure eaque.</p>
-        `
+        content: "Apart from including those cute moments in Mikeneko's live steaming, all other contents in this website such as the fans letter, the birthday arts and Minecraft map art are also included, which can be said to be the extract of this event! Please enjoy this wonderful work from our video team!"
       },
       "minecraft": {
         title: "Fan-made Minecraft Map Art",
-        content: `
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus obcaecati veritatis quam tempore fugit consectetur libero enim harum ad necessitatibus voluptatibus sint, error est doloribus facere dicta odio iure eaque.</p>
-        `
+        content: "Combining the fan art created by 8 illustrators in the past year, which concentrated all the happiness in a year and express it with Minecraft map art. We want to give our best wishes to Mikeneko and look forward to having more happy moments in the future."
       }
     }
   },
