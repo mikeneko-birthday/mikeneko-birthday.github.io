@@ -4,7 +4,7 @@
       <div class="profile_page">
         <div class="profile_card">
           <div class="profile_picture">
-            <img class="profile_photo" src="@/assets/img/nav/mikeneko_icon.jpg" alt="みけねこ" />
+            <img class="profile_photo" src="@/assets/img/user_icon/mikeneko_icon.jpg" alt="Mikeneko Profile Icon">
           </div>
           <div class="profile_content">
             <h2 class="profile_name">@95rn16</h2>
