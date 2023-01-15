@@ -29,6 +29,19 @@ const messages = {
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus obcaecati veritatis quam tempore fugit consectetur libero enim harum ad necessitatibus voluptatibus sint, error est doloribus facere dicta odio iure eaque.</p>
         `
       }
+    },
+    "Profile": {
+      posts: "{count} posts",
+      followers: "{count} followers",
+      following: "{count} following",
+      introduction: "Introduction Dummy",
+      blessing: "Blessing Dummy",
+      credits: {
+        artists: "Artists",
+        assistants: "Assistants",
+        leads: "Leads",
+        developers: "Developers"
+      }
     }
   },
   "zh": {
@@ -61,6 +74,19 @@ const messages = {
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus obcaecati veritatis quam tempore fugit consectetur libero enim harum ad necessitatibus voluptatibus sint, error est doloribus facere dicta odio iure eaque.</p>
         `
       }
+    },
+    "Profile": {
+      posts: "{count}篇貼文",
+      followers: "{count}個跟隨中",
+      following: "{count}位跟隨者",
+      introduction: "Introduction Dummy",
+      blessing: "Blessing Dummy",
+      credits: {
+        artists: "畫師",
+        assistants: "協助者",
+        leads: "統籌",
+        developers: "程式設計"
+      }
     }
   },
   "ja": {
@@ -92,6 +118,19 @@ const messages = {
         content: `
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus obcaecati veritatis quam tempore fugit consectetur libero enim harum ad necessitatibus voluptatibus sint, error est doloribus facere dicta odio iure eaque.</p>
         `
+      }
+    },
+    "Profile": {
+      posts: "投稿{count}件",
+      followers: "フォロワー{count}人",
+      following: "フォロー中{count}人",
+      introduction: "Introduction Dummy",
+      blessing: "Blessing Dummy",
+      credits: {
+        artists: "絵師",
+        assistants: "お手伝い",
+        leads: "担当者",
+        developers: "開発者"
       }
     }
   },
