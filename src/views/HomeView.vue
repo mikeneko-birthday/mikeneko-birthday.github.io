@@ -8,21 +8,27 @@
         <div class="block-media other-paw" v-viewer.static="{ 'navbar': false }">
           <img src="@/assets/img/water/mikeneko-bd1.png" alt="Mikeneko birthday celebration drawing">
         </div>
-        <div class="block-content" v-html="$t('Home.video.content')"></div>
+        <div class="block-content">
+          <p>{{ $t('Home.draw.content') }}</p>
+        </div>
       </ContentBlock>
 
       <ContentBlock class="celebrate-video" :title="$t('Home.video.title')">
         <div class="block-media">
           <YoutubePlayer />
         </div>
-        <div class="block-content" v-html="$t('Home.video.content')"></div>
+        <div class="block-content">
+          <p>{{ $t('Home.video.content') }}</p>
+        </div>
       </ContentBlock>
 
       <ContentBlock class="celebrate-minecraft" :title="$t('Home.minecraft.title')">
         <div class="block-media other-paw" v-viewer.static="{ 'navbar': false }">
           <img src="@/assets/img/water/mikeneko-bd1.png" alt="Mikeneko birthday celebration drawing">
         </div>
-        <div class="block-content" v-html="$t('Home.video.content')"></div>
+        <div class="block-content">
+          <p>{{ $t('Home.minecraft.content') }}</p>
+        </div>
       </ContentBlock>
     </section>
   </SiteContent>
