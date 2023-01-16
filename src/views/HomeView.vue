@@ -15,7 +15,7 @@
 
       <ContentBlock class="celebrate-video" :title="$t('Home.video.title')">
         <div class="block-media">
-          <YoutubePlayer />
+          <YoutubePlayer vid="cINTZQxhzko" />
         </div>
         <div class="block-content">
           <p>{{ $t('Home.video.content') }}</p>
@@ -37,8 +37,8 @@
 <script>
 import ContentBlock from "@/components/ContentBlock.vue";
 import SiteContent from "@/components/SiteComponents/SiteContent.vue";
-import PawLine from "@/components/Widget/PawLine.vue";
-import YoutubePlayer from "@/components/Widget/YoutubePlayer.vue";
+import PawLine from "@/components/Widgets/PawLine.vue";
+import YoutubePlayer from "@/components/Widgets/YoutubePlayer.vue";
 
 export default {
   components: {

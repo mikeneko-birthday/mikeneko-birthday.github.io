@@ -53,6 +53,10 @@ button {
   border: none;
 }
 
+a:hover {
+  color: var(--color-sub);
+}
+
 img, svg, .ov-icon {
   display: block;
   max-width: 100%;

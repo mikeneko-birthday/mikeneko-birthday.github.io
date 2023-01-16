@@ -39,10 +39,10 @@
 
 <script>
 import SiteContent from "@/components/SiteComponents/SiteContent.vue";
-import LetterCard from "@/components/LetterCard.vue";
+import LetterCard from "@/components/Cards/LetterCard.vue";
 
 import letters from "@/data/letters";
-import PageSelect from "@/components/Widget/PageSelect.vue";
+import PageSelect from "@/components/Widgets/PageSelect.vue";
 
 export default {
   components: { SiteContent, LetterCard, PageSelect },

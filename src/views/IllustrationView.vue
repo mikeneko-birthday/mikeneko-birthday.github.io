@@ -22,7 +22,7 @@
 </template>
 
 <script>
-import DrawingCard from "@/components/DrawingCard.vue";
+import DrawingCard from "@/components/Cards/DrawingCard.vue";
 import SiteContent from "@/components/SiteComponents/SiteContent.vue";
 
 import drawing from "@/data/drawing";
