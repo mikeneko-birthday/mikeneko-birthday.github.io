@@ -1,6 +1,5 @@
 <template>
   <div class="lang-switch">
-    <!-- Change to component la -->
     <button type="button" class="lang-button" @click="toggleList" @blur="closeList">
       <v-icon name="io-language" />
     </button>
@@ -67,6 +66,7 @@ export default {
   position: relative;
   .lang-button {
     color: var(--color-main);
+    line-height: 1;
     .ov-icon {
       width: 1.75rem;
       height: 1.75rem;

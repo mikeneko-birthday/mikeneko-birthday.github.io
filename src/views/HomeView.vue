@@ -6,7 +6,7 @@
 
       <ContentBlock class="celebrate-draw" :title="$t('Home.draw.title')">
         <div class="block-media other-paw" v-viewer.static="{ 'navbar': false }">
-          <img src="@/assets/img/water/mikeneko-bd1.png" alt="Mikeneko birthday celebration drawing">
+          <img src="@/assets/img/drawings/mikeneko_bd1.jpg" alt="Mikeneko birthday celebration drawing">
         </div>
         <div class="block-content">
           <p>{{ $t('Home.draw.content') }}</p>
@@ -24,7 +24,7 @@
 
       <ContentBlock class="celebrate-minecraft" :title="$t('Home.minecraft.title')">
         <div class="block-media other-paw" v-viewer.static="{ 'navbar': false }">
-          <img src="@/assets/img/water/mikeneko-bd1.png" alt="Mikeneko birthday celebration drawing">
+          <img src="@/assets/img/drawings/mikeneko_mapart.jpg" alt="Mikeneko birthday celebration drawing">
         </div>
         <div class="block-content">
           <p>{{ $t('Home.minecraft.content') }}</p>
