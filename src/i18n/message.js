@@ -27,7 +27,7 @@ const messages = {
     "Profile": {
       birthday: "Birthday: 1/18",
       introduction: "Mikeneko, a “byojaku” girl with cat’s ears who always gets more and more energetic on stream.\n\nShe is forever 17 years old, and she is mainly active on Twitter, TwitCasting and YouTube. She is used to starting stream before meal time, bath time and your sleeping time, which usually plans to stream for 10 minutes (where it will be actually at least 6 times longer at last). However, it's okay! Since she is cute, she can stream as long as she wants!\n\nHer current goal as a streamer is to get one million subscribers on her YouTube channel, PLEASE BACK HER UP!",
-      blessing: "#Mikeneko Birthday Celebration Project 2023 is a special event site established for celebrating Mikeneko’s birthday. To highlight Mikeneko’s appearance of a girl with cat’s ears, the main visual of this site is decorated with pink tones and elements of cat’s paw. This site is divided into three parts, videos, illustrations and handwriting letters, which gathering all the token of gratitude from overseas audiences. HAPPY BIRTHDAY TO MIKENEKO 🎂",
+      blessing: "#Mikeneko Birthday Celebration Project 2023 event site is a special event site established for celebrating Mikeneko’s birthday. To highlight Mikeneko’s appearance of a girl with cat’s ears, the main visual of this site is decorated with pink tones and elements of cat’s paw. This site is divided into three parts, videos, illustrations and handwriting letters, which gathering all the token of gratitude from overseas audiences. HAPPY BIRTHDAY TO MIKENEKO 🎂",
       credits: {
         title: "Credits",
         organizer: "Organizer",
@@ -67,7 +67,7 @@ const messages = {
     "Profile": {
       birthday: "生日日期：1/18",
       introduction: "總是越直播越有精神的病弱系貓耳少女，年齡是永遠的17歲。\n\n主要活動的地點是Twitter、TwitCasting以及YouTube，直播時間是吃飯前、洗澡水放好前跟睡覺前，直播長度通常是十分鐘（×6↑），但是因為很可愛所以不管想直播多久都完全沒有問題！\n\n作為直播主近期的目標是YouTube頻道100萬訂閱，請各位多多支持！",
-      blessing: "#みけねこ生日紀念計劃2023 是為了慶祝みけねこ的生日所創立的特別活動網站。網站的主視覺使用粉色系以及貓掌的元素點綴，凸顯みけねこ貓耳少女的外型，網站內容分為影片、手寫信以及賀圖三個部分，匯集了海外觀眾滿滿的心意，為みけねこ的生日獻上祝福 🎂",
+      blessing: "#みけねこ生日紀念計劃2023 活動網站是為了慶祝みけねこ的生日所創立的特別活動網站。網站的主視覺使用粉色系以及貓掌的元素點綴，凸顯みけねこ貓耳少女的外型，網站內容分為影片、手寫信以及賀圖三個部分，匯集了海外觀眾滿滿的心意，為みけねこ的生日獻上祝福 🎂",
       credits: {
         title: "Credits",
         organizer: "企劃人員",
@@ -107,7 +107,7 @@ const messages = {
     "Profile": {
       birthday: "お誕生日：1/18",
       introduction: "いつも配信によて元気になるの病弱系ネコ耳少女、永遠の十七才です。\n\n活動範囲は主にツイッター、ツイキャスとYouTube。配信時間は大体ご飯食べる前、風呂水溜まる前と寝る前です。配信の長さは10分ほど（×6↑）、かわいいので配信耐久はどのくらいでも全然大丈夫だ！\n\n配信者としで目指YouTubeチャンネル登録数百万です、どうかよろしくお願いします",
-      blessing: "#みけねこお誕生日記念2023 はみけねこちゃんの誕生日を祝うために作られた特別活動サイトです。みけねこちゃんの猫耳少女の外形を強調するために、このサイトは主にピンク系と猫の手を飾っています。サイトの内容はビデオ、手書きの手紙とファンアートの三部分に分けられています。海外のリスナーいっぱいの気持ちを集めて、みけねこちゃんの誕生日に祝福を 🎂",
+      blessing: "#みけねこお誕生日記念2023 イベントサイトはみけねこちゃんの誕生日を祝うために作られた特別活動サイトです。みけねこちゃんの猫耳少女の外形を強調するために、このサイトは主にピンク系と猫の手を飾っています。サイトの内容はビデオ、手書きの手紙とファンアートの三部分に分けられています。海外のリスナーいっぱいの気持ちを集めて、みけねこちゃんの誕生日に祝福を 🎂",
       credits: {
         title: "クレジット",
         organizer: "企画",
