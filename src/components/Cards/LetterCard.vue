@@ -1,5 +1,5 @@
 <template>
-  <div class="letter">
+  <article class="letter">
     <div class="letter-txt">
       <div class="letter-top">{{ top }}</div>
       <div class="letter-content">
@@ -19,7 +19,7 @@
         </button>
       </div>
     </div>
-  </div>
+  </article>
 </template>
 
 <script>

@@ -1,5 +1,5 @@
 <template>
-  <div class="drawing">
+  <article class="drawing">
     <div class="drawing-meta">
       <div class="drawer-icon">
         <img :class="`type-${drawerIcon}`" :src="require(`@/assets/img/user_icon/nekofami${drawerIcon}.png`)" alt="Drawer Icon">
@@ -30,7 +30,7 @@
         </button>
       </div> -->
     </div>
-  </div>
+  </article>
 </template>
 
 <script>
