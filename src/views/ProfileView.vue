@@ -2,8 +2,8 @@
   <SiteContent>
     <section class="view view-profile">
       <ProfileCard class="user-card">
-        <div class="profile-picture">
-          <img class="profile-photo" src="@/assets/img/user_icon/mikeneko_icon.jpg" alt="Mikeneko Profile Icon">
+        <div class="profile-photo">
+          <img src="@/assets/img/user_icon/mikeneko_icon.jpg" alt="Mikeneko Profile Icon">
         </div>
         <div class="profile-content">
           <h2 class="profile-name">みけねこch</h2>
@@ -150,7 +150,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .view-profile {
   display: flex;
   flex-flow: column nowrap;
@@ -172,8 +172,11 @@ export default {
       margin-bottom: 1rem;
     }
     .profile-photo {
-      width: 10rem;
-      border-radius: 5rem;
+      img {
+        display: inline-block;
+        width: 10rem;
+        border-radius: 5rem;
+      }
     }
     .introduction {
       text-align: justify;
@@ -184,8 +187,7 @@ export default {
     }
   }
   .profile-content {
-    width: 0;
-    flex-grow: 1;
+    flex: 1 0 0;
   }
   .social-accounts {
     list-style-type: none;
@@ -234,6 +236,56 @@ export default {
         margin-left: 0.25rem;
         &:hover {
           color: var(--color-theme6);
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 58em) {
+    .paw-line {
+      svg:nth-child(n+11) {
+        display: none;
+      }
+    }
+    .user-card {
+      flex-flow: column nowrap;
+      .profile-photo, .profile-content, .introduction {
+        text-align: center;
+      }
+    }
+    .credits {
+      .credit-list {
+        grid-template-columns: repeat(2, 1fr);
+        .credit-column:nth-of-type(1) {
+          grid-column: 1 / 3;
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 1rem;
+          .credit-group {
+            margin-top: 0;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 48em) {
+    .user-card {
+      max-width: none;
+    }
+  }
+
+  @media screen and (max-width: 37.5em) {
+    .credits {
+      .credit-list {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        .credit-column:nth-of-type(1) {
+          grid-column: auto;
+          display: block;
+          .credit-group + .credit-group {
+            margin-top: 1.5rem;
+          }
         }
       }
     }
