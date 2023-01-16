@@ -112,6 +112,7 @@ export default {
       a {
         color: #7a7a7a;
         text-decoration: none;
+        transition: color .3s ease;
         &:hover {
           color: var(--color-sub);
           .ov-icon {
