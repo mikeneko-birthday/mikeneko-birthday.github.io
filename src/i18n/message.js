@@ -13,21 +13,21 @@ const messages = {
     "Home": {
       "draw": {
         title: "Happy Birthday 2023 To Our Mikeneko!",
-        content: "We collected 9 birthday arts from 8 illustrator. To deliver our best wishes to our dear Mikeneko!"
+        content: "We collected 9 birthday arts from 8 illustrators to deliver our best wishes to our dear Mikeneko!"
       },
       "video": {
         title: "Birthday Celebration Video",
-        content: "Apart from including those cute moments in Mikeneko's live steaming, all other contents in this website such as the fans letter, the birthday arts and Minecraft map art are also included, which can be said to be the extract of this event! Please enjoy this wonderful work from our video team!"
+        content: "Apart from those cute moments in Mikeneko's live steaming, all other contents on this website such as the fan letters,  birthday arts, and Minecraft map art are also included, which can be said to be the extract of this event! Please enjoy this wonderful work from our video team!"
       },
       "minecraft": {
         title: "Fan-made Minecraft Map Art",
-        content: "Combining the fan art created by 8 illustrators in the past year, which concentrated all the happiness in a year and express it with Minecraft map art. We want to give our best wishes to Mikeneko and look forward to having more happy moments in the future."
+        content: "Combining the fan art from 8 illustrators in the past year, we concentrated all the happiness in the past year and expressed it with Minecraft map art. We want to give our best wishes to Mikeneko and look forward to having more happy moments in the future."
       }
     },
     "Profile": {
       birthday: "Birthday: 1/18",
-      introduction: "Mikeneko, a “byojaku” girl with cat’s ears who always gets more and more energetic on stream.\n\nShe is forever 17 years old, and she is mainly active on Twitter, TwitCasting and YouTube. She is used to starting stream before meal time, bath time and your sleeping time, which usually plans to stream for 10 minutes (where it will be actually at least 6 times longer at last). However, it's okay! Since she is cute, she can stream as long as she wants!\n\nHer current goal as a streamer is to get one million subscribers on her YouTube channel, PLEASE BACK HER UP!",
-      blessing: "#Mikeneko Birthday Celebration Project 2023 event site is a special event site established for celebrating Mikeneko’s birthday. To highlight Mikeneko’s appearance of a girl with cat’s ears, the main visual of this site is decorated with pink tones and elements of cat’s paw. This site is divided into three parts, videos, illustrations and handwriting letters, which gathering all the token of gratitude from overseas audiences. HAPPY BIRTHDAY TO MIKENEKO 🎂",
+      introduction: "Mikeneko is a “byojaku” girl with cat ears who always gets more and more energetic on stream. She is forever 17 years old and mainly active on Twitter, TwitCasting and YouTube. She is used to starting her streams before meal time, bath time and your sleeping time. Usually she plans to stream for 10 minutes (though it will be actually at least 6 times longer). However, it's okay! Since she is cute, she can stream for as long as she wants! Her current goal as a streamer is to get one million subscribers on her YouTube channel, PLEASE BACK HER UP!",
+      blessing: "#Mikeneko Birthday Celebration Project 2023 event site is a special event site established for celebrating Mikeneko’s birthday. To highlight Mikeneko’s cat-like appearance, the main visual of this site is decorated with pink tones and elements of a cat’s paw. This site is divided into three main parts: videos, illustrations, and handwritten letters, which gather all the tokens of gratitude from overseas audiences. HAPPY BIRTHDAY TO MIKENEKO 🎂",
       credits: {
         title: "Credits",
         organizer: "Organizer",
@@ -93,25 +93,25 @@ const messages = {
     "Home": {
       "draw": {
         title: "みけねこ、お誕生日おめでとうございます！",
-        content: "8人の海外の絵師さんから9枚の誕生日のお祝いのファンアートを集めた、素敵なファンアートを集めて愛するみけねこちゃんに私たちの心を捧げます。"
+        content: "8人の海外絵師さんから9枚の誕生日お祝いファンアートを集めた。素敵なファンアートを集めて、私たちが愛するみけねこちゃんに心を捧げます。"
       },
       "video": {
         title: "みけねこお誕生日2023記念動画",
-        content: "みけねこちゃん普段の配信の可愛いシーンを集めた以外に、このサイトのお手紙、ファンアート、マイクラ地上絵を全部この動画に集めて、今回の企画のさわりと言うことができます！是非是非ご覧ください。"
+        content: "みけねこちゃん普段の配信の可愛いシーンを集めて以外に、このサイトのお手紙とファンアートとマイクラ地上絵を全部この動画で集めて、この企画のさわりです！是非是非ご覧ください。"
       },
       "minecraft": {
         title: "ファン達作ったマップアート",
-        content: "8人の絵師さんの去年のファンアートを編集して、最後にマイクラ地上絵で皆様に去年1年分の笑いを届きます。この絵は私たちがみけねこちゃんに送る誕生日のお祝いでもあり、同時に新しい一年はもっと楽しい時間を一緒に過ごすことの期待でもあります。"
+        content: "8人の絵師さんの去年のファンアートを編集して、最後にマイクラ地上絵で皆様に去年1年分の笑いを届けます。この絵は私たちがみけねこちゃんに送る誕生日のお祝いでもあり、同時に新しい一年はもっと楽しい時間を一緒に過ごすことの期待でもあります。"
       }
     },
     "Profile": {
       birthday: "お誕生日：1/18",
       introduction: "いつも配信によて元気になるの病弱系ネコ耳少女、永遠の十七才です。\n\n活動範囲は主にツイッター、ツイキャスとYouTube。配信時間は大体ご飯食べる前、風呂水溜まる前と寝る前です。配信の長さは10分ほど（×6↑）、かわいいので配信耐久はどのくらいでも全然大丈夫だ！\n\n配信者としで目指YouTubeチャンネル登録数百万です、どうかよろしくお願いします",
-      blessing: "#みけねこお誕生日記念2023 イベントサイトはみけねこちゃんの誕生日を祝うために作られた特別活動サイトです。みけねこちゃんの猫耳少女の外形を強調するために、このサイトは主にピンク系と猫の手を飾っています。サイトの内容はビデオ、手書きの手紙とファンアートの三部分に分けられています。海外のリスナーいっぱいの気持ちを集めて、みけねこちゃんの誕生日に祝福を 🎂",
+      blessing: "#みけねこお誕生日記念2023 イベントサイトはみけねこちゃんの誕生日を祝うために作られた特別活動サイトです。みけねこちゃんの猫耳少女の特徴を強調するために、このサイトは主にピンク系と猫の手を飾っています。サイトの内容は動画、手書きの手紙とファンアートの三部分に分けられています。海外のリスナーいっぱいの気持ちを集めて、みけねこちゃんに誕生日の祝福を 🎂",
       credits: {
         title: "クレジット",
         organizer: "企画",
-        developer: "開発者",
+        developer: "ウェブサイト開発者",
         video: "クリップ",
         translator: "翻訳",
         illustrator: "イラスト",
