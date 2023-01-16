@@ -27,6 +27,7 @@ html {
   overflow: hidden auto;
   &[lang="zh"] {
     font-family: "FakePearl-Regular", sans-serif;
+    line-height: 1.5;
   }
   .letter {
     font-family: "Zen Maru Gothic", Helvetica, Arial, sans-serif;
@@ -53,8 +54,11 @@ button {
   border: none;
 }
 
-a:hover {
-  color: var(--color-sub);
+a {
+  transition: color .3s ease;
+  &:hover {
+    color: var(--color-sub);
+  }
 }
 
 img, svg, .ov-icon {

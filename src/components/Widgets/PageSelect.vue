@@ -141,7 +141,6 @@ export default {
   column-gap: 1rem;
   .btn-control {
     color: var(--color-main);
-    transition: color .3s ease;
     .ov-icon {
       width: 2rem;
       height: 2rem;

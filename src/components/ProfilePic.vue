@@ -1,6 +1,6 @@
 <template>
   <div class="profile-pic">
-    <router-link :to="{ name: 'about' }">
+    <router-link :to="{ name: 'profile' }">
     <img
       src="@/assets/img/user_icon/mikeneko_icon.jpg"
       alt="Mikeneko Profile Icon"

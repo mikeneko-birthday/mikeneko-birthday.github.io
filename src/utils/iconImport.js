@@ -5,6 +5,7 @@ import {
   BiZoomIn,
   FaPaw,
   FaTwitter,
+  FaYoutube,
   IoLanguage,
 } from "oh-vue-icons/icons";
 
@@ -13,6 +14,7 @@ addIcons(
   BiZoomIn,
   FaPaw,
   FaTwitter,
+  FaYoutube,
   IoLanguage,
 );
 
