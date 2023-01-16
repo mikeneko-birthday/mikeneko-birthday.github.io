@@ -32,6 +32,9 @@ export default {
     border-radius: 2rem;
     box-shadow: 0 .25rem .5rem 0 rgba(0,0,0,.15);
     padding: 3rem;
+    @media screen and (max-width: 30em) {
+      padding: 2rem;
+    }
   }
   .card-title {
     text-align: center;
