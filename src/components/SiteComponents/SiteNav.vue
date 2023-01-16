@@ -52,11 +52,11 @@ export default {
           text: this.$t("Section.Home"),
         },
         {
-          class: "link-about",
-          name: "about",
-          path: "/about",
-          icon: require("@/assets/img/nav/about.svg"),
-          text: this.$t("Section.About"),
+          class: "link-profile",
+          name: "profile",
+          path: "/profile",
+          icon: require("@/assets/img/nav/profile.svg"),
+          text: this.$t("Section.Profile"),
         },
         {
           class: "link-illustration",

@@ -2,7 +2,8 @@
   <div
     :class="[
       'paw-line',
-      { 'up-down': upDownStyle }
+      { 'up-down': upDownStyle },
+      { 'glow': glow },
     ]"
     :style="{
       '--paw-size': sizeData,
@@ -44,6 +45,10 @@ export default {
       type: Boolean,
       default: false
     },
+    glow: {
+      type: Boolean,
+      default: false
+    },
   },
   data() {
     return {
@@ -79,6 +84,11 @@ export default {
       &.purple-paw {
         margin-top: 0.25rem;
       }
+    }
+  }
+  &.glow {
+    svg {
+      filter: drop-shadow(0 0px 3px #fff);
     }
   }
 }
