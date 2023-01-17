@@ -92,7 +92,7 @@ export default {
   },
   watch: {
     pageInput(newValue) {
-      if (newValue == "") return;
+      if (newValue === "") return;
       if (newValue < 1) {
         this.pageInput = 1;
       } else if (newValue > this.max) {
