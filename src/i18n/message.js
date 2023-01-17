@@ -111,7 +111,7 @@ const messages = {
       credits: {
         title: "クレジット",
         organizer: "企画",
-        developer: "開発者",
+        developer: "ウェブサイト開発者",
         video: "クリップ",
         translator: "翻訳",
         illustrator: "イラスト",
