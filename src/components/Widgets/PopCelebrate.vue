@@ -28,9 +28,9 @@ export default {
     };
   },
   watch: {
-    show() {
+    show(newValue) {
       setTimeout(() => {
-        this.confetti = true;
+        this.confetti = newValue;
       }, 2000);
     }
   },
@@ -43,15 +43,13 @@ export default {
   },
   methods: {
     surprise() {
+      this.confetti = false;
       setTimeout(() => {
         this.show = true;
         setTimeout(() => {
           this.show = false;
-          setTimeout(() => {
-            this.confetti = false;
-          }, 1000);
         }, 4500);
-      }, 0);
+      }, 500);
     }
   },
 };
