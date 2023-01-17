@@ -243,7 +243,7 @@ export default {
 
   @media screen and (max-width: 58em) {
     .paw-line {
-      svg:nth-child(n+11) {
+      svg:nth-child(n+12) {
         display: none;
       }
     }
@@ -276,6 +276,11 @@ export default {
   }
 
   @media screen and (max-width: 37.5em) {
+    .paw-line {
+      svg:nth-child(n+10) {
+        display: none;
+      }
+    }
     .credits {
       .credit-list {
         grid-template-columns: 1fr;
@@ -287,6 +292,14 @@ export default {
             margin-top: 1.5rem;
           }
         }
+      }
+    }
+  }
+
+  @media screen and (max-width: 30em) {
+    .paw-line {
+      svg:nth-child(n+8) {
+        display: none;
       }
     }
   }

@@ -17,7 +17,7 @@ const messages = {
       },
       "video": {
         title: "Birthday Celebration Video",
-        content: "Apart from those cute moments in Mikeneko's live steaming, all other contents on this website such as the fan letters,  birthday arts, and Minecraft map art are also included, which can be said to be the extract of this event! Please enjoy this wonderful work from our video team!"
+        content: "Apart from those cute moments in Mikeneko's live stream, all other contents on this website such as the fan letters,  birthday arts, and Minecraft map art are also included, which can be said to be the extract of this event! Please enjoy this wonderful work from our video team!"
       },
       "minecraft": {
         title: "Fan-made Minecraft Map Art",
@@ -26,7 +26,7 @@ const messages = {
     },
     "Profile": {
       birthday: "Birthday: 1/18",
-      introduction: "Mikeneko is a “byojaku” girl with cat ears who always gets more and more energetic on stream. She is forever 17 years old and mainly active on Twitter, TwitCasting and YouTube. She is used to starting her streams before meal time, bath time and your sleeping time. Usually she plans to stream for 10 minutes (though it will be actually at least 6 times longer). However, it's okay! Since she is cute, she can stream for as long as she wants! Her current goal as a streamer is to get one million subscribers on her YouTube channel, PLEASE BACK HER UP!",
+      introduction: "Mikeneko is a “byojaku” girl with cat ears who always gets more and more energetic on stream.\n\nShe is forever 17 years old, and she is mainly active on Twitter, TwitCasting and YouTube. She is used to starting her streams before meal time, bath time and your sleeping time. Usually she plans to stream for 10 minutes (it will be actually at least 6 times longer). However, it's okay! Since she is cute, she can stream for as long as she wants!\n\nHer current goal as a streamer is to get one million subscribers on her YouTube channel, PLEASE BACK HER UP!",
       blessing: "#Mikeneko Birthday Celebration Project 2023 event site is a special event site established for celebrating Mikeneko’s birthday. To highlight Mikeneko’s cat-like appearance, the main visual of this site is decorated with pink tones and elements of a cat’s paw. This site is divided into three main parts: videos, illustrations, and handwritten letters, which gather all the tokens of gratitude from overseas audiences. HAPPY BIRTHDAY TO MIKENEKO 🎂",
       credits: {
         title: "Credits",
