@@ -25,7 +25,7 @@ export default {
       this.show = true;
       setTimeout(() => {
         this.show = false;
-      }, 5000);
+      }, 4000);
     }, 500);
   },
 };
@@ -42,16 +42,17 @@ export default {
   opacity: 0;
   visibility: hidden;
   z-index: 10;
-  transition: all .5s ease;
+  transition: all 1s ease;
   .msg-holder {
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
     position: relative;
+    width: 100%;
     .msg {
       color: #FFC000;
-      font-size: 10vw;
+      font-size: 15vmin;
       font-family: "Dancing Script", cursive;
       text-align: center;
       text-shadow: 0 0 .5rem #acacac;
@@ -59,28 +60,36 @@ export default {
       bottom: 2rem;
       width: 100%;
       opacity: 0;
+      transition: opacity 1s ease;
     }
     img {
+      max-height: 100vh;
+      max-height: 100dvh;
       opacity: 0;
+      transition: opacity 1s ease;
     }
   }
   &.show {
     opacity: 1;
     visibility: visible;
-    img, .msg {
+    transition: all 1s ease;
+    img {
       opacity: 1;
+      transition: opacity 1s ease 1s;
+    }
+    .msg {
+      opacity: 1;
+      transition: opacity 1s ease 2s;
     }
   }
   @media screen and (max-width: 48em) {
     .msg-holder {
       .msg {
         font-size: 12vw;
-        transition: opacity 1s ease 1.5s;
       }
       img {
         max-width: none;
         max-height: 80vh;
-        transition: opacity 1s ease .5s;
       }
     }
   }
