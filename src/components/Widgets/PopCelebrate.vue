@@ -20,8 +20,10 @@ export default {
   align-items: center;
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, .8);
+  background: rgba(0, 0, 0, 0);
+  visibility: hidden;
   z-index: 10;
+  transition: background .5s ease;
   .msg-holder {
     display: flex;
     flex-flow: column nowrap;
@@ -37,6 +39,19 @@ export default {
       position: absolute;
       bottom: 2rem;
       width: 100%;
+      opacity: 0;
+      transition: opacity 1s ease 1.5s;
+    }
+    img {
+      opacity: 0;
+      transition: opacity 1s ease .5s;
+    }
+  }
+  &.show {
+    background: rgba(0, 0, 0, 0.8);
+    visibility: visible;
+    img, .msg {
+      opacity: 1;
     }
   }
   @media screen and (max-width: 48em) {
