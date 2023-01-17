@@ -116,7 +116,7 @@ export default {
             [this.$t("Profile.credits.translator")]: [
               { name: "Koyuki", twitter: "KoyukiChan0101" },
               { name: "李瑭瑭", twitter: "tang_riko" },
-              { name: "Teeyi81", twitter: "TY81MY" },
+              { name: "Tさん", twitter: "TY81MY" },
               { name: "Rockねこ", twitter: "FD1388888" },
               { name: "雪松", twitter: "YukiMatsu1225" },
               { name: "蒼アオ", twitter: "nkmraoao" },
