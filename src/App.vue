@@ -2,14 +2,16 @@
   <SiteHeader />
   <SiteBody />
   <div class="web-bg" />
+  <PopCelebrate />
 </template>
 
 <script>
 import SiteBody from "./components/SiteComponents/SiteBody.vue";
 import SiteHeader from "./components/SiteComponents/SiteHeader.vue";
+import PopCelebrate from "./components/Widgets/PopCelebrate.vue";
 
 export default {
-  components: { SiteHeader, SiteBody },
+  components: { SiteHeader, SiteBody, PopCelebrate },
   mounted() {
     if (!localStorage.cursor) {
       localStorage.cursor = "catpaw";
@@ -30,6 +32,9 @@ export default {
   --nav-mobile-height: 5.25rem;
   display: flex;
   flex-flow: column nowrap;
+  max-height: 100vh;
+  max-height: 100dvh;
+  overflow: auto;
   &.cat-paw {
     cursor: url("@/assets/img/paw/cat_paw1.svg"), auto;
     * {

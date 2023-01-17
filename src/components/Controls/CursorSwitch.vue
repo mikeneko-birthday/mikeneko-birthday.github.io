@@ -32,7 +32,6 @@ export default {
 
 <style lang="scss" scoped>
 .cursor-switch {
-  line-height: 1;
   .cursor-button {
     color: var(--color-main);
     .ov-icon {

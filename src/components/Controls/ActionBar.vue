@@ -2,6 +2,7 @@
   <div class="action-bar">
     <LangSwitch />
     <CursorSwitch />
+    <Surprise />
     <ProfilePic />
   </div>
 </template>
@@ -10,9 +11,10 @@
 import ProfilePic from "../ProfilePic.vue";
 import CursorSwitch from "./CursorSwitch.vue";
 import LangSwitch from "./LangSwitch.vue";
+import Surprise from "./Surprise.vue";
 
 export default {
-  components: { LangSwitch, CursorSwitch, ProfilePic },
+  components: { LangSwitch, CursorSwitch, ProfilePic, Surprise },
 };
 </script>
 
@@ -24,6 +26,11 @@ export default {
   gap: 1rem;
   @media screen and (max-width: 48em) { // 48 * 16 = 768
     gap: 0.75rem;
+  }
+  @media screen and (max-width: 30em) { // 48 * 16 = 768
+    .cursor-switch {
+      display: none;
+    }
   }
 }
 </style>

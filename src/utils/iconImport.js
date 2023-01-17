@@ -7,6 +7,7 @@ import {
   FaTwitter,
   FaYoutube,
   IoLanguage,
+  HiSolidCake,
 } from "oh-vue-icons/icons";
 
 addIcons(
@@ -16,6 +17,7 @@ addIcons(
   FaTwitter,
   FaYoutube,
   IoLanguage,
+  HiSolidCake,
 );
 
 export default OhVueIcon;
