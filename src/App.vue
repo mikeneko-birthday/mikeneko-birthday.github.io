@@ -2,14 +2,16 @@
   <SiteHeader />
   <SiteBody />
   <div class="web-bg" />
+  <PopCelebrate />
 </template>
 
 <script>
 import SiteBody from "./components/SiteComponents/SiteBody.vue";
 import SiteHeader from "./components/SiteComponents/SiteHeader.vue";
+import PopCelebrate from "./components/Widgets/PopCelebrate.vue";
 
 export default {
-  components: { SiteHeader, SiteBody },
+  components: { SiteHeader, SiteBody, PopCelebrate },
   mounted() {
     if (!localStorage.cursor) {
       localStorage.cursor = "catpaw";
