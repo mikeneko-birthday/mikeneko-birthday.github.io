@@ -35,12 +35,20 @@ export default {
     }
   },
   mounted() {
-    setTimeout(() => {
-      this.show = true;
+    if (!localStorage.surprised) {
+      this.surprise();
+      localStorage.surprised = true;
+    }
+  },
+  methods: {
+    surprise() {
       setTimeout(() => {
-        this.show = false;
-      }, 4500);
-    }, 500);
+        this.show = true;
+        setTimeout(() => {
+          this.show = false;
+        }, 4500);
+      }, 500);
+    }
   },
 };
 </script>
