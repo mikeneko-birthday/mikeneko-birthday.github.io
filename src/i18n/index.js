@@ -2,6 +2,8 @@ import { createI18n } from "vue-i18n";
 import messages from "./message";
 
 const locale = localStorage.site_lang || "ja";
+localStorage.site_lang = locale;
+
 const i18n = createI18n({
   // default locale
   locale: locale,
