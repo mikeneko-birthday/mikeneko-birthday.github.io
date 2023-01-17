@@ -9,23 +9,37 @@
       <img src="@/assets/img/drawings/mikeneko_bd2.png" alt="Happy Birthday to Mikeneko">
       <div class="msg msg-bottom">Happy Birthday</div>
     </div>
+    <ConfettiExplosion v-if="confetti" class="confetti confetti-1"/>
+    <ConfettiExplosion v-if="confetti" class="confetti confetti-2"/>
   </div>
 </template>
 
 <script>
+import ConfettiExplosion from "vue-confetti-explosion";
 
 export default {
+  components: {
+    ConfettiExplosion,
+  },
   data() {
     return {
       show: false,
+      confetti: false,
     };
+  },
+  watch: {
+    show() {
+      setTimeout(() => {
+        this.confetti = true;
+      }, 2000);
+    }
   },
   mounted() {
     setTimeout(() => {
       this.show = true;
       setTimeout(() => {
         this.show = false;
-      }, 4000);
+      }, 4500);
     }, 500);
   },
 };
@@ -43,6 +57,24 @@ export default {
   visibility: hidden;
   z-index: 10;
   transition: all 1s ease;
+  .confetti-container {
+    position: absolute;
+    top: 20%;
+    &.confetti-1{
+      left: 10%;
+    }
+    &.confetti-2{
+      right: 10%;
+    }
+    @media screen and (max-width: 48em) {
+      &.confetti-1{
+        left: 0;
+      }
+      &.confetti-2{
+        right: 0;
+      }
+    }
+  }
   .msg-holder {
     display: flex;
     flex-flow: column nowrap;

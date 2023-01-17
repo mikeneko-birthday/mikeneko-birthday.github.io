@@ -23,6 +23,7 @@ export default {
 
 <style lang="scss">
 .site-header {
+  flex-shrink: 0;
   display: block;
   position: fixed;
   inset: 0 0 auto;
@@ -42,6 +43,7 @@ export default {
     width: 12.5rem;
   }
   @media screen and (max-width: 48em) { // 48 * 16 = 768
+    --header-height: 7.75rem;
     position: static;
     .site-logo {
       width: 10rem;
