@@ -39,6 +39,7 @@ export default {
       this.surprise();
       localStorage.surprised = true;
     }
+    this.$emitter.on("surprise", this.surprise);
   },
   methods: {
     surprise() {
@@ -46,8 +47,11 @@ export default {
         this.show = true;
         setTimeout(() => {
           this.show = false;
+          setTimeout(() => {
+            this.confetti = false;
+          }, 1000);
         }, 4500);
-      }, 500);
+      }, 0);
     }
   },
 };
