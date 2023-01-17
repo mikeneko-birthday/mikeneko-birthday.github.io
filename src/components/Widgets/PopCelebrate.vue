@@ -1,5 +1,10 @@
 <template>
-  <div class="model-celebrate">
+  <div
+    :class="[
+      'model-celebrate',
+      { 'show': show }
+    ]"
+  >
     <div class="msg-holder">
       <img src="@/assets/img/drawings/mikeneko_bd2.png" alt="Happy Birthday to Mikeneko">
       <div class="msg msg-bottom">Happy Birthday</div>
@@ -10,6 +15,19 @@
 <script>
 
 export default {
+  data() {
+    return {
+      show: false,
+    };
+  },
+  mounted() {
+    setTimeout(() => {
+      this.show = true;
+      setTimeout(() => {
+        this.show = false;
+      }, 5000);
+    }, 500);
+  },
 };
 </script>
 
@@ -20,10 +38,11 @@ export default {
   align-items: center;
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0);
+  background: rgba(0, 0, 0, 0.8);
+  opacity: 0;
   visibility: hidden;
   z-index: 10;
-  transition: background .5s ease;
+  transition: all .5s ease;
   .msg-holder {
     display: flex;
     flex-flow: column nowrap;
@@ -40,15 +59,13 @@ export default {
       bottom: 2rem;
       width: 100%;
       opacity: 0;
-      transition: opacity 1s ease 1.5s;
     }
     img {
       opacity: 0;
-      transition: opacity 1s ease .5s;
     }
   }
   &.show {
-    background: rgba(0, 0, 0, 0.8);
+    opacity: 1;
     visibility: visible;
     img, .msg {
       opacity: 1;
@@ -56,12 +73,14 @@ export default {
   }
   @media screen and (max-width: 48em) {
     .msg-holder {
+      .msg {
+        font-size: 12vw;
+        transition: opacity 1s ease 1.5s;
+      }
       img {
         max-width: none;
         max-height: 80vh;
-      }
-      .msg {
-        font-size: 12vw;
+        transition: opacity 1s ease .5s;
       }
     }
   }
