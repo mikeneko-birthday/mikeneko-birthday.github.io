@@ -108,7 +108,7 @@ export default {
           list: {
             [this.$t("Profile.credits.developer")]: [
               { name: "オリバー", twitter: "oliver_hei" },
-              { name: "音羽みのり", twitter: "YuuJinS_CSJ" },
+              { name: "友人S", twitter: "YuuJinS_CSJ" },
             ],
             [this.$t("Profile.credits.video")]: [
               { name: "ヤンデレ猫", twitter: "yanneko_tw" },
@@ -122,6 +122,7 @@ export default {
               { name: "蒼アオ", twitter: "nkmraoao" },
               { name: "上井草", twitter: "_Kamiigusa_" },
               { name: "ワンナ", twitter: "wanna_chan" },
+              { name: "オリバー", twitter: "oliver_hei" },
             ],
           }
         },
