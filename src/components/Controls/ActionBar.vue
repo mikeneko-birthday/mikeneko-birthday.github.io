@@ -11,7 +11,7 @@
 import ProfilePic from "../ProfilePic.vue";
 import CursorSwitch from "./CursorSwitch.vue";
 import LangSwitch from "./LangSwitch.vue";
-import Surprise from "./Surprise.vue";
+import Surprise from "./SurpriseBtn.vue";
 
 export default {
   components: { LangSwitch, CursorSwitch, ProfilePic, Surprise },
