@@ -28,7 +28,7 @@
       <PawLine :num="15" size="2rem" gap=".5rem" upDownStyle glow />
 
       <ProfileCard class="event-video" :no-bg="true">
-        <YoutubePlayer vid="cINTZQxhzko" />
+        <YoutubePlayer vid="UOXO0I5N36E" />
       </ProfileCard>
 
       <ProfileCard class="blessing-container">

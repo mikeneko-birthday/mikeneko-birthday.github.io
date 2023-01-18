@@ -46,8 +46,10 @@ export default {
       this.confetti = false;
       setTimeout(() => {
         this.show = true;
+        document.documentElement.style.overflow = "hidden";
         setTimeout(() => {
           this.show = false;
+          document.documentElement.style.overflow = "";
         }, 4500);
       }, 500);
     }

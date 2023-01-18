@@ -32,9 +32,6 @@ export default {
   --nav-mobile-height: 5.25rem;
   display: flex;
   flex-flow: column nowrap;
-  max-height: 100vh;
-  max-height: 100dvh;
-  overflow: auto;
   &.cat-paw {
     cursor: url("@/assets/img/paw/cat_paw1.svg"), auto;
     * {
