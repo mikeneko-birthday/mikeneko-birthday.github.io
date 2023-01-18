@@ -13,7 +13,8 @@ const messages = {
     "Home": {
       "draw": {
         title: "Happy Birthday 2023 To Our Mikeneko!",
-        content: "We collected 9 birthday arts from 8 illustrators to deliver our best wishes to our dear Mikeneko!"
+        content: "We collected 9 birthday arts from 8 illustrators to deliver our best wishes to our dear Mikeneko!",
+        warn: "Illustrator: {drawer}\n(Reproduction without permission is prohibited)"
       },
       "video": {
         title: "Birthday Celebration Video",
@@ -53,7 +54,8 @@ const messages = {
     "Home": {
       "draw": {
         title: "祝貓姐2023年生日快樂！",
-        content: "集合了8名海外繪師總共9張的生日賀圖，用絢爛的色彩和華麗的線條為我們最喜愛的みけねこ獻上滿滿的心意！"
+        content: "集合了8名海外繪師總共9張的生日賀圖，用絢爛的色彩和華麗的線條為我們最喜愛的みけねこ獻上滿滿的心意！",
+        warn: "畫師：{drawer}\n（禁止一切未經准許的轉截行為）"
       },
       "video": {
         title: "生日祝賀影片",
@@ -93,7 +95,8 @@ const messages = {
     "Home": {
       "draw": {
         title: "みけねこ、お誕生日おめでとうございます！",
-        content: "8人の海外絵師さんから9枚の誕生日お祝いファンアートを集めた。素敵なファンアートを集めて、私たちが愛するみけねこちゃんに心を捧げます。"
+        content: "8人の海外絵師さんから9枚の誕生日お祝いファンアートを集めた。素敵なファンアートを集めて、私たちが愛するみけねこちゃんに心を捧げます。",
+        warn: "絵師さん：{drawer}\n（無断転載は禁止です）"
       },
       "video": {
         title: "みけねこお誕生日2023記念動画",

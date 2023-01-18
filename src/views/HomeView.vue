@@ -7,6 +7,14 @@
       <ContentBlock class="celebrate-draw" :title="$t('Home.draw.title')">
         <div class="block-media other-paw" v-viewer.static="{ 'navbar': false }">
           <img src="@/assets/img/drawings/mikeneko_bd1.jpg" alt="Mikeneko Birthday Celebration Drawing">
+          <i18n-t class="warning" keypath="Home.draw.warn" tag="p">
+            <template #drawer>
+              <a href="https://twitter.com/cantdraw0" target="_blank" rel="noopener noreferrer">
+                <v-icon name="fa-twitter" />
+                <span>水🐾🦋🍭🔺</span>
+              </a>
+            </template>
+          </i18n-t>
         </div>
         <div class="block-content">
           <p>{{ $t('Home.draw.content') }}</p>
@@ -23,8 +31,8 @@
       </ContentBlock>
 
       <ContentBlock class="celebrate-minecraft" :title="$t('Home.minecraft.title')">
-        <div class="block-media other-paw" v-viewer.static="{ 'navbar': false }">
-          <img src="@/assets/img/drawings/mikeneko_mapart.jpg" alt="Mikeneko Birthday Celebration Minecraft Map Art">
+        <div class="block-media">
+          <YoutubePlayer vid="7cClo4oktCI" />
         </div>
         <div class="block-content">
           <p>{{ $t('Home.minecraft.content') }}</p>
@@ -52,6 +60,22 @@ export default {
 
 <style lang="scss">
 .view-home {
+  .warning {
+    line-height: 1.25;
+    text-align: center;
+    white-space: pre-line;
+    margin-top: .75rem;
+    a {
+      text-decoration: none;
+      span {
+        color: inherit;
+      }
+    }
+    .ov-icon {
+      display: inline-block;
+      margin-right: 0.25rem;
+    }
+  }
   .block-media {
     width: 70%;
     margin: auto;
