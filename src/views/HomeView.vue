@@ -31,8 +31,8 @@
       </ContentBlock>
 
       <ContentBlock class="celebrate-minecraft" :title="$t('Home.minecraft.title')">
-        <div class="block-media other-paw" v-viewer.static="{ 'navbar': false }">
-          <img src="@/assets/img/drawings/mikeneko_mapart.jpg" alt="Mikeneko Birthday Celebration Minecraft Map Art">
+        <div class="block-media">
+          <YoutubePlayer vid="7cClo4oktCI" />
         </div>
         <div class="block-content">
           <p>{{ $t('Home.minecraft.content') }}</p>
