@@ -15,7 +15,7 @@
 
       <ContentBlock class="celebrate-video" :title="$t('Home.video.title')">
         <div class="block-media">
-          <YoutubePlayer vid="cINTZQxhzko" />
+          <YoutubePlayer vid="UOXO0I5N36E" />
         </div>
         <div class="block-content">
           <p>{{ $t('Home.video.content') }}</p>
